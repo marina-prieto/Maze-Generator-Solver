@@ -5,8 +5,7 @@ from PIL import Image, ImageDraw
 
 class Maze:
     rows, columns = int(), int()
-    body, frontier, directions = list(), list(), list()
-    pointer = tuple()
+    body, frontier, directions, pointer = list(), list(), list(), list()
 
     def __init__(self, rows, columns):
         self.rows = rows
@@ -32,10 +31,30 @@ class Maze:
             self.find_path("Path")
             everything_visited = self.look_for_visited()
             self.free_resources()
-        print(self.body)
 
     def generate_image(self):
-        pass
+        # Determine a size for the picture, which depends on the size of a cell (20x20 px)
+        maze_pic = Image.new(mode="1", size=((self.rows * 20) + 10, (self.columns * 20) + 10), color=1)
+        maze_pic_draw = ImageDraw.Draw(maze_pic)
+        # Initialize a pointer in (5,5) (x,y)
+
+        pointer = [5, 5]
+        for i in range(self.rows):
+            if i != 0:
+                pointer[0] = 5
+                pointer[1] += 20
+            for j in range(self.columns):
+                if j != 0:
+                    pointer[0] += 20
+                if not self.body[i][j].NESO[0]:
+                    maze_pic_draw.line((pointer[0], pointer[1], pointer[0] + 20, pointer[1]), width=3, fill=0)
+                if not self.body[i][j].NESO[1]:
+                    maze_pic_draw.line((pointer[0] + 20, pointer[1], pointer[0] + 20, pointer[1] + 20), width=3, fill=0)
+                if not self.body[i][j].NESO[2]:
+                    maze_pic_draw.line((pointer[0], pointer[1] + 20, pointer[0] + 20, pointer[1] + 20), width=3, fill=0)
+                if not self.body[i][j].NESO[3]:
+                    maze_pic_draw.line((pointer[0], pointer[1], pointer[0], pointer[1] + 20), width=3, fill=0)
+        maze_pic.show()
 
     def generate_json(self):
         pass
