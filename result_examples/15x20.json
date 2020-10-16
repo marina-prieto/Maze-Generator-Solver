@@ -27,2704 +27,2704 @@
         "O"
     ],
     "cells": {
-        "(0,0)": {
+        "(0, 0)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 false,
                 false
             ]
         },
-        "(0,1)": {
+        "(0, 1)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 false,
                 true
             ]
         },
-        "(0,2)": {
+        "(0, 2)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 false,
                 true,
                 true
             ]
         },
-        "(0,3)": {
+        "(0, 3)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 true,
                 false
             ]
         },
-        "(0,4)": {
+        "(0, 4)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 false,
                 true
             ]
         },
-        "(0,5)": {
+        "(0, 5)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
-                false,
+                true,
                 true
             ]
         },
-        "(0,6)": {
+        "(0, 6)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
-                true,
+                false,
                 true
             ]
         },
-        "(0,7)": {
+        "(0, 7)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                false,
+                true,
                 false,
                 true
             ]
         },
-        "(0,8)": {
+        "(0, 8)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 false,
-                false
+                true
             ]
         },
-        "(0,9)": {
+        "(0, 9)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
-                false,
+                true,
                 true
             ]
         },
-        "(0,10)": {
+        "(0, 10)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                true,
+                false,
                 true,
                 true
             ]
         },
-        "(0,11)": {
+        "(0, 11)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                true,
                 false,
-                true
+                true,
+                false
             ]
         },
-        "(0,12)": {
+        "(0, 12)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 true,
-                true
+                false
             ]
         },
-        "(0,13)": {
+        "(0, 13)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 false,
-                false,
+                true,
                 true
             ]
         },
-        "(0,14)": {
+        "(0, 14)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                true,
                 false,
+                true,
                 false
             ]
         },
-        "(0,15)": {
+        "(0, 15)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
-                false,
-                true
-            ]
-        },
-        "(0,16)": {
-            "value": 0,
-            "neighbours": [
-                false,
                 true,
-                false,
-                true
+                false
             ]
         },
-        "(0,17)": {
+        "(0, 16)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 false,
                 true,
                 true
             ]
         },
-        "(0,18)": {
+        "(0, 17)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 false,
                 true,
                 false
             ]
         },
-        "(0,19)": {
+        "(0, 18)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 false,
                 true,
                 false
             ]
         },
-        "(1,0)": {
+        "(0, 19)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                true,
                 false,
+                true,
                 false
             ]
         },
-        "(1,1)": {
+        "(1, 0)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 false,
-                true
+                false
             ]
         },
-        "(1,2)": {
+        "(1, 1)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
                 true,
+                true,
                 true
             ]
         },
-        "(1,3)": {
+        "(1, 2)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 true,
                 true,
-                false
+                true
             ]
         },
-        "(1,4)": {
+        "(1, 3)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
                 false,
+                false,
                 true
             ]
         },
-        "(1,5)": {
+        "(1, 4)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 false,
                 false,
-                true
+                true,
+                false
             ]
         },
-        "(1,6)": {
+        "(1, 5)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 true,
                 false,
                 false
             ]
         },
-        "(1,7)": {
+        "(1, 6)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 false,
                 true,
                 true
             ]
         },
-        "(1,8)": {
+        "(1, 7)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                true,
                 false,
+                true,
                 false
             ]
         },
-        "(1,9)": {
+        "(1, 8)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                true,
+                false,
                 true,
-                true
+                false
             ]
         },
-        "(1,10)": {
+        "(1, 9)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 true,
                 false,
-                true
+                true,
+                false
             ]
         },
-        "(1,11)": {
+        "(1, 10)": {
             "value": 0,
-            "neighbours": [
-                false,
-                false,
+            "neighbors": [
                 true,
-                true
+                true,
+                false,
+                false
             ]
         },
-        "(1,12)": {
+        "(1, 11)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
                 false,
-                false
+                true
             ]
         },
-        "(1,13)": {
+        "(1, 12)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
+                true,
                 false,
                 true,
                 false
             ]
         },
-        "(1,14)": {
+        "(1, 13)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
+                true,
                 false,
                 false
             ]
         },
-        "(1,15)": {
+        "(1, 14)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
                 true,
+                false,
                 true
             ]
         },
-        "(1,16)": {
+        "(1, 15)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
+                true,
                 false,
                 false,
                 true
             ]
         },
-        "(1,17)": {
+        "(1, 16)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 true,
+                false,
                 true,
                 false
             ]
         },
-        "(1,18)": {
+        "(1, 17)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 true,
-                false,
-                true
+                true,
+                false
             ]
         },
-        "(1,19)": {
+        "(1, 18)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                false,
+                true,
                 false,
                 true
             ]
         },
-        "(2,0)": {
+        "(1, 19)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
+                true,
                 false,
                 true,
-                false
+                true
             ]
         },
-        "(2,1)": {
+        "(2, 0)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                true,
                 false,
+                true,
                 false
             ]
         },
-        "(2,2)": {
+        "(2, 1)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
                 true,
-                true
+                false
             ]
         },
-        "(2,3)": {
+        "(2, 2)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 true,
                 true,
                 false
             ]
         },
-        "(2,4)": {
+        "(2, 3)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 false,
+                true,
                 false,
                 true
             ]
         },
-        "(2,5)": {
+        "(2, 4)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
+                true,
                 false,
                 true,
-                false
+                true
             ]
         },
-        "(2,6)": {
+        "(2, 5)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 false,
                 true,
                 false
             ]
         },
-        "(2,7)": {
+        "(2, 6)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                false,
+                true,
                 false,
                 false
             ]
         },
-        "(2,8)": {
+        "(2, 7)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
+                false,
                 true,
-                false
+                true
             ]
         },
-        "(2,9)": {
+        "(2, 8)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 true,
                 false,
-                true
+                false
             ]
         },
-        "(2,10)": {
+        "(2, 9)": {
             "value": 0,
-            "neighbours": [
-                false,
-                false,
+            "neighbors": [
+                true,
+                true,
                 false,
                 true
             ]
         },
-        "(2,11)": {
+        "(2, 10)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
+                false,
                 true,
                 true,
-                false,
-                false
+                true
             ]
         },
-        "(2,12)": {
+        "(2, 11)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 false,
                 false,
                 true
             ]
         },
-        "(2,13)": {
+        "(2, 12)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
-                true,
+                false,
                 false
             ]
         },
-        "(2,14)": {
+        "(2, 13)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 false,
                 false
             ]
         },
-        "(2,15)": {
+        "(2, 14)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
+                false,
                 true,
                 false,
                 true
             ]
         },
-        "(2,16)": {
+        "(2, 15)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                true,
+                false,
                 true,
                 true
             ]
         },
-        "(2,17)": {
+        "(2, 16)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                false,
                 true,
-                true
+                false,
+                false
             ]
         },
-        "(2,18)": {
+        "(2, 17)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
                 true,
-                false
+                false,
+                true
             ]
         },
-        "(2,19)": {
+        "(2, 18)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 false,
                 false,
                 true
             ]
         },
-        "(3,0)": {
+        "(2, 19)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 true,
                 false,
+                true,
                 false
             ]
         },
-        "(3,1)": {
+        "(3, 0)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
                 true,
-                true
+                false,
+                false
             ]
         },
-        "(3,2)": {
+        "(3, 1)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
-                true,
+                false,
                 true
             ]
         },
-        "(3,3)": {
+        "(3, 2)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 true,
-                true,
-                false
-            ]
-        },
-        "(3,4)": {
-            "value": 0,
-            "neighbours": [
-                false,
                 false,
                 false,
-                true
+                false
             ]
         },
-        "(3,5)": {
+        "(3, 3)": {
             "value": 0,
-            "neighbours": [
-                true,
-                true,
+            "neighbors": [
+                false,
                 true,
+                false,
                 false
             ]
         },
-        "(3,6)": {
+        "(3, 4)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 true,
-                true,
-                true
-            ]
-        },
-        "(3,7)": {
-            "value": 0,
-            "neighbours": [
                 false,
-                true,
-                true,
                 true
             ]
         },
-        "(3,8)": {
+        "(3, 5)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 true,
                 false,
+                false,
                 true
             ]
         },
-        "(3,9)": {
+        "(3, 6)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 false,
                 false,
-                true
+                true,
+                false
             ]
         },
-        "(3,10)": {
+        "(3, 7)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
                 false,
+                true,
                 false
             ]
         },
-        "(3,11)": {
+        "(3, 8)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 false,
-                true
+                false
             ]
         },
-        "(3,12)": {
+        "(3, 9)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                true,
+                false,
                 true,
                 true
             ]
         },
-        "(3,13)": {
+        "(3, 10)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
+                true,
                 true,
+                true,
+                false
+            ]
+        },
+        "(3, 11)": {
+            "value": 0,
+            "neighbors": [
                 false,
+                true,
                 false,
                 true
             ]
         },
-        "(3,14)": {
+        "(3, 12)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                true,
                 false,
-                false
+                false,
+                true
             ]
         },
-        "(3,15)": {
+        "(3, 13)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 true,
-                true
+                false
             ]
         },
-        "(3,16)": {
+        "(3, 14)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
                 false,
+                true,
                 true
             ]
         },
-        "(3,17)": {
+        "(3, 15)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                true,
                 false,
+                true,
                 false
             ]
         },
-        "(3,18)": {
+        "(3, 16)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
                 true,
-                true
+                false,
+                false
             ]
         },
-        "(3,19)": {
+        "(3, 17)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 false,
                 true,
-                false
+                true
             ]
         },
-        "(4,0)": {
+        "(3, 18)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 false,
                 true,
                 false
             ]
         },
-        "(4,1)": {
+        "(3, 19)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
-                false,
+                true,
                 false
             ]
         },
-        "(4,2)": {
+        "(4, 0)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
                 true,
+                false,
                 false
             ]
         },
-        "(4,3)": {
+        "(4, 1)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
+                false,
                 true,
                 false,
-                false
+                true
             ]
         },
-        "(4,4)": {
+        "(4, 2)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                false,
                 true,
+                false,
                 true
             ]
         },
-        "(4,5)": {
+        "(4, 3)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
                 true,
-                false
+                false,
+                true
             ]
         },
-        "(4,6)": {
+        "(4, 4)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
                 false,
-                false
+                true,
+                true
             ]
         },
-        "(4,7)": {
+        "(4, 5)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
+                false,
                 true,
                 true,
-                false,
                 false
             ]
         },
-        "(4,8)": {
+        "(4, 6)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
-                false,
+                true,
+                true,
                 true
             ]
         },
-        "(4,9)": {
+        "(4, 7)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
+                true,
                 false,
                 false,
-                true,
                 true
             ]
         },
-        "(4,10)": {
+        "(4, 8)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 false,
                 false
             ]
         },
-        "(4,11)": {
+        "(4, 9)": {
             "value": 0,
-            "neighbours": [
-                false,
-                false,
+            "neighbors": [
                 true,
+                true,
+                false,
                 true
             ]
         },
-        "(4,12)": {
+        "(4, 10)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                false,
                 true,
-                false
+                false,
+                true
             ]
         },
-        "(4,13)": {
+        "(4, 11)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 false,
-                true,
-                false
+                false,
+                true
             ]
         },
-        "(4,14)": {
+        "(4, 12)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 true,
                 false
             ]
         },
-        "(4,15)": {
+        "(4, 13)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
-                false,
+                true,
                 true
             ]
         },
-        "(4,16)": {
+        "(4, 14)": {
             "value": 0,
-            "neighbours": [
-                false,
-                false,
+            "neighbors": [
                 true,
-                false
-            ]
-        },
-        "(4,17)": {
-            "value": 0,
-            "neighbours": [
-                false,
-                false,
                 true,
+                false,
                 false
             ]
         },
-        "(4,18)": {
+        "(4, 15)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 true,
                 true,
-                false
+                true
             ]
         },
-        "(4,19)": {
+        "(4, 16)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
+                false,
                 true,
                 true
             ]
         },
-        "(5,0)": {
+        "(4, 17)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                false,
                 true,
+                true,
                 false
             ]
         },
-        "(5,1)": {
+        "(4, 18)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
                 false,
-                false
+                false,
+                true
             ]
         },
-        "(5,2)": {
+        "(4, 19)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 true,
+                false,
                 true,
-                true
+                false
             ]
         },
-        "(5,3)": {
+        "(5, 0)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 false,
                 true,
-                true
+                false
             ]
         },
-        "(5,4)": {
+        "(5, 1)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
+                false,
                 true,
                 false
             ]
         },
-        "(5,5)": {
+        "(5, 2)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
+                false,
                 true,
                 false,
                 false
             ]
         },
-        "(5,6)": {
+        "(5, 3)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                true,
+                false,
                 true,
                 true
             ]
         },
-        "(5,7)": {
+        "(5, 4)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
                 true,
-                true
+                true,
+                false
             ]
         },
-        "(5,8)": {
+        "(5, 5)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
+                true,
                 false,
                 false,
                 true
             ]
         },
-        "(5,9)": {
+        "(5, 6)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                false,
+                true,
                 false,
                 false
             ]
         },
-        "(5,10)": {
+        "(5, 7)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 false,
                 true,
-                false
+                true
             ]
         },
-        "(5,11)": {
+        "(5, 8)": {
             "value": 0,
-            "neighbours": [
-                true,
-                true,
+            "neighbors": [
+                false,
+                false,
                 true,
                 false
             ]
         },
-        "(5,12)": {
+        "(5, 9)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
+                false,
                 true,
                 true,
+                false
+            ]
+        },
+        "(5, 10)": {
+            "value": 0,
+            "neighbors": [
+                false,
                 true,
+                false,
                 true
             ]
         },
-        "(5,13)": {
+        "(5, 11)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
+                false,
                 true,
                 true
             ]
         },
-        "(5,14)": {
+        "(5, 12)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                false,
                 false,
+                true,
                 false
             ]
         },
-        "(5,15)": {
+        "(5, 13)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
                 true,
+                false,
                 false
             ]
         },
-        "(5,16)": {
+        "(5, 14)": {
             "value": 0,
-            "neighbours": [
-                true,
-                true,
+            "neighbors": [
+                false,
                 false,
+                false,
                 true
             ]
         },
-        "(5,17)": {
+        "(5, 15)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 true,
+                false,
                 true,
-                true
+                false
             ]
         },
-        "(5,18)": {
+        "(5, 16)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
-                true,
-                true
+                false,
+                false
             ]
         },
-        "(5,19)": {
+        "(5, 17)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
                 true,
                 false
             ]
         },
-        "(6,0)": {
+        "(5, 18)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
+                false,
                 true,
                 true,
                 false
             ]
         },
-        "(6,1)": {
+        "(5, 19)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
+                true,
                 false,
                 false,
-                true,
                 true
+            ]
+        },
+        "(6, 0)": {
+            "value": 0,
+            "neighbors": [
+                true,
+                true,
+                true,
+                false
             ]
         },
-        "(6,2)": {
+        "(6, 1)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
+                true,
+                true,
                 true,
+                true
+            ]
+        },
+        "(6, 2)": {
+            "value": 0,
+            "neighbors": [
                 false,
                 false,
-                false
+                false,
+                true
             ]
         },
-        "(6,3)": {
+        "(6, 3)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 true,
                 false,
                 false
             ]
         },
-        "(6,4)": {
+        "(6, 4)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 true,
-                false,
+                true,
                 true
             ]
         },
-        "(6,5)": {
+        "(6, 5)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 false,
                 true
             ]
         },
-        "(6,6)": {
+        "(6, 6)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
                 false,
+                false,
                 true
             ]
         },
-        "(6,7)": {
+        "(6, 7)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 true,
                 true,
+                false,
                 false
             ]
         },
-        "(6,8)": {
+        "(6, 8)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
                 true,
+                true,
                 true
             ]
         },
-        "(6,9)": {
+        "(6, 9)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
                 true,
+                false,
                 true
             ]
         },
-        "(6,10)": {
+        "(6, 10)": {
             "value": 0,
-            "neighbours": [
-                true,
-                true,
+            "neighbors": [
+                false,
                 false,
+                true,
                 true
             ]
         },
-        "(6,11)": {
+        "(6, 11)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
                 true,
-                true
+                false
             ]
         },
-        "(6,12)": {
+        "(6, 12)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
-                true,
+                false,
                 false
             ]
         },
-        "(6,13)": {
+        "(6, 13)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
+                false,
                 true,
                 false
             ]
         },
-        "(6,14)": {
+        "(6, 14)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 true,
                 false
             ]
         },
-        "(6,15)": {
+        "(6, 15)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 true,
                 true,
+                false,
                 true
             ]
         },
-        "(6,16)": {
+        "(6, 16)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 false,
-                false,
+                true,
+                true,
                 true
             ]
         },
-        "(6,17)": {
+        "(6, 17)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
-                true,
-                false
+                false,
+                true
             ]
         },
-        "(6,18)": {
+        "(6, 18)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                false,
                 true,
+                true,
                 false
             ]
         },
-        "(6,19)": {
+        "(6, 19)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
+                false,
                 true,
-                false
+                true
             ]
         },
-        "(7,0)": {
+        "(7, 0)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                false,
                 false,
+                true,
                 false
             ]
         },
-        "(7,1)": {
+        "(7, 1)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 true,
                 false,
+                true,
                 false
             ]
         },
-        "(7,2)": {
+        "(7, 2)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 false,
-                true
+                false
             ]
         },
-        "(7,3)": {
+        "(7, 3)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 false,
                 true,
                 true
             ]
         },
-        "(7,4)": {
+        "(7, 4)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
-                false,
+                true,
+                true,
                 false
             ]
         },
-        "(7,5)": {
+        "(7, 5)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                true,
                 false,
-                true
-            ]
-        },
-        "(7,6)": {
-            "value": 0,
-            "neighbours": [
                 false,
-                true,
-                true,
                 true
             ]
         },
-        "(7,7)": {
+        "(7, 6)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
+                false,
                 false,
                 true,
-                true
+                false
             ]
         },
-        "(7,8)": {
+        "(7, 7)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
+                true,
                 false,
                 false
             ]
         },
-        "(7,9)": {
+        "(7, 8)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                false,
+                true,
                 false,
-                false
+                true
             ]
         },
-        "(7,10)": {
+        "(7, 9)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                true,
                 false,
-                false
-            ]
-        },
-        "(7,11)": {
-            "value": 0,
-            "neighbours": [
-                true,
                 false,
-                true,
                 true
             ]
         },
-        "(7,12)": {
+        "(7, 10)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
                 false,
                 false
             ]
         },
-        "(7,13)": {
+        "(7, 11)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
                 true,
                 false
             ]
         },
-        "(7,14)": {
+        "(7, 12)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
+                true,
                 false,
                 false
             ]
         },
-        "(7,15)": {
+        "(7, 13)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 true,
-                false,
-                false
-            ]
-        },
-        "(7,16)": {
-            "value": 0,
-            "neighbours": [
-                false,
-                false,
                 true,
                 true
             ]
         },
-        "(7,17)": {
+        "(7, 14)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                false,
+                true,
                 false,
-                false
+                true
             ]
         },
-        "(7,18)": {
+        "(7, 15)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
                 false,
-                false
+                false,
+                true
             ]
         },
-        "(7,19)": {
+        "(7, 16)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
-                false,
+                true,
                 false
             ]
         },
-        "(8,0)": {
+        "(7, 17)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 false,
                 false
             ]
         },
-        "(8,1)": {
+        "(7, 18)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
+                true,
                 false,
                 true,
                 true
             ]
         },
-        "(8,2)": {
+        "(7, 19)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
+                false,
                 true,
                 false
             ]
         },
-        "(8,3)": {
+        "(8, 0)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                true,
                 false,
-                true
+                false,
+                false
             ]
         },
-        "(8,4)": {
+        "(8, 1)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
+                true,
                 false,
                 true,
-                true
+                false
             ]
         },
-        "(8,5)": {
+        "(8, 2)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                true,
                 false,
+                true,
                 false
             ]
         },
-        "(8,6)": {
+        "(8, 3)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                false,
                 true,
-                true
+                false,
+                false
             ]
         },
-        "(8,7)": {
+        "(8, 4)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 true,
                 true,
-                false
+                true
             ]
         },
-        "(8,8)": {
+        "(8, 5)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 false,
                 true,
                 true
             ]
         },
-        "(8,9)": {
+        "(8, 6)": {
             "value": 0,
-            "neighbours": [
-                false,
-                false,
+            "neighbors": [
                 true,
+                true,
+                false,
                 false
             ]
         },
-        "(8,10)": {
+        "(8, 7)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                true,
                 false,
-                false
+                true,
+                true
             ]
         },
-        "(8,11)": {
+        "(8, 8)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
                 false,
-                true
+                true,
+                false
             ]
         },
-        "(8,12)": {
+        "(8, 9)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 true,
                 false
             ]
         },
-        "(8,13)": {
+        "(8, 10)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
+                false,
                 true,
                 false,
                 true
             ]
         },
-        "(8,14)": {
+        "(8, 11)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
+                false,
                 true,
                 true
             ]
         },
-        "(8,15)": {
+        "(8, 12)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 true,
-                true
+                false
             ]
         },
-        "(8,16)": {
+        "(8, 13)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 true,
-                false,
+                true,
                 true
             ]
         },
-        "(8,17)": {
+        "(8, 14)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 false,
                 false,
                 true
             ]
         },
-        "(8,18)": {
+        "(8, 15)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                false,
                 true,
-                false
-            ]
-        },
-        "(8,19)": {
-            "value": 0,
-            "neighbours": [
-                false,
                 false,
-                true,
                 false
             ]
         },
-        "(9,0)": {
+        "(8, 16)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
-                true,
-                false
-            ]
-        },
-        "(9,1)": {
-            "value": 0,
-            "neighbours": [
                 true,
                 true,
-                false,
                 true
             ]
         },
-        "(9,2)": {
+        "(8, 17)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
-                true,
+                false,
+                false,
                 true
             ]
         },
-        "(9,3)": {
+        "(8, 18)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
+                true,
                 false,
                 false,
-                true,
                 false
             ]
         },
-        "(9,4)": {
+        "(8, 19)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
-                false,
+                true,
                 false
             ]
         },
-        "(9,5)": {
+        "(9, 0)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                true,
                 false,
+                true,
                 false
             ]
         },
-        "(9,6)": {
+        "(9, 1)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                false,
                 true,
-                true
+                false,
+                false
             ]
         },
-        "(9,7)": {
+        "(9, 2)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                false,
                 true,
-                false
+                true,
+                true
             ]
         },
-        "(9,8)": {
+        "(9, 3)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
+                false,
                 true,
                 false,
-                false
+                true
             ]
         },
-        "(9,9)": {
+        "(9, 4)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
                 true,
                 true
             ]
         },
-        "(9,10)": {
+        "(9, 5)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
-                false,
+                true,
+                true,
                 false
             ]
         },
-        "(9,11)": {
+        "(9, 6)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 true,
                 true
             ]
         },
-        "(9,12)": {
+        "(9, 7)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                false,
                 true,
-                true
-            ]
-        },
-        "(9,13)": {
-            "value": 0,
-            "neighbours": [
-                false,
                 true,
-                false,
-                false
+                true
             ]
         },
-        "(9,14)": {
+        "(9, 8)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
                 false,
                 true
             ]
         },
-        "(9,15)": {
+        "(9, 9)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                false,
                 true,
+                true,
                 false
             ]
         },
-        "(9,16)": {
+        "(9, 10)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                true,
+                false,
                 true,
-                false
+                true
             ]
         },
-        "(9,17)": {
+        "(9, 11)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
                 false,
-                true
+                true,
+                false
             ]
         },
-        "(9,18)": {
+        "(9, 12)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
                 false,
-                true
+                false
             ]
         },
-        "(9,19)": {
+        "(9, 13)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                false,
                 true,
+                true,
                 false
             ]
         },
-        "(10,0)": {
+        "(9, 14)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
                 false,
-                false
+                false,
+                true
             ]
         },
-        "(10,1)": {
+        "(9, 15)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 false,
                 false
             ]
         },
-        "(10,2)": {
+        "(9, 16)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 true,
                 false,
                 true
             ]
         },
-        "(10,3)": {
+        "(9, 17)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
+                false,
                 true,
                 true,
                 true
             ]
         },
-        "(10,4)": {
+        "(9, 18)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 false,
                 false,
                 true
             ]
         },
-        "(10,5)": {
+        "(9, 19)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
                 false,
+                true,
                 false
             ]
         },
-        "(10,6)": {
+        "(10, 0)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
                 true,
-                true
+                false
             ]
         },
-        "(10,7)": {
+        "(10, 1)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
+                true,
                 false,
                 false
             ]
         },
-        "(10,8)": {
+        "(10, 2)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
                 true,
-                false
+                false,
+                true
             ]
         },
-        "(10,9)": {
+        "(10, 3)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
+                false,
                 true,
                 true
             ]
         },
-        "(10,10)": {
+        "(10, 4)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
+                true,
                 false,
                 false,
-                true,
                 false
             ]
         },
-        "(10,11)": {
+        "(10, 5)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
                 false,
                 false
             ]
         },
-        "(10,12)": {
+        "(10, 6)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
                 false,
                 false
             ]
         },
-        "(10,13)": {
+        "(10, 7)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
+                true,
                 false,
                 true,
                 false
             ]
         },
-        "(10,14)": {
+        "(10, 8)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 false,
                 false
             ]
         },
-        "(10,15)": {
+        "(10, 9)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
-                true,
+                false,
                 true
             ]
         },
-        "(10,16)": {
+        "(10, 10)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
-                true,
+                false,
                 false
             ]
         },
-        "(10,17)": {
+        "(10, 11)": {
             "value": 0,
-            "neighbours": [
-                false,
-                false,
+            "neighbors": [
+                true,
                 true,
+                true,
                 false
             ]
         },
-        "(10,18)": {
+        "(10, 12)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 false,
-                false
+                true
             ]
         },
-        "(10,19)": {
+        "(10, 13)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                false,
                 true,
+                true,
                 true
             ]
         },
-        "(11,0)": {
+        "(10, 14)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 false,
-                false
+                true
             ]
         },
-        "(11,1)": {
+        "(10, 15)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
-                false,
+                true,
                 true
             ]
         },
-        "(11,2)": {
+        "(10, 16)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 false,
-                true,
+                false,
                 true
             ]
         },
-        "(11,3)": {
+        "(10, 17)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 true,
                 false,
                 false
             ]
         },
-        "(11,4)": {
+        "(10, 18)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 false,
                 true,
                 true
             ]
         },
-        "(11,5)": {
+        "(10, 19)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
+                false,
                 true,
                 false
             ]
         },
-        "(11,6)": {
+        "(11, 0)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
+                true,
                 true,
+                true,
+                false
+            ]
+        },
+        "(11, 1)": {
+            "value": 0,
+            "neighbors": [
+                false,
                 false,
                 false,
                 true
             ]
         },
-        "(11,7)": {
+        "(11, 2)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 false,
                 true,
                 false
             ]
         },
-        "(11,8)": {
+        "(11, 3)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
-                false,
+                true,
                 false
             ]
         },
-        "(11,9)": {
+        "(11, 4)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
+                true,
                 false,
                 false
             ]
         },
-        "(11,10)": {
+        "(11, 5)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
                 true,
-                false
+                false,
+                true
             ]
         },
-        "(11,11)": {
+        "(11, 6)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                false,
                 true,
-                false
+                false,
+                true
             ]
         },
-        "(11,12)": {
+        "(11, 7)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
+                true,
                 true,
                 false,
-                false
+                true
             ]
         },
-        "(11,13)": {
+        "(11, 8)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
-                true,
+                false,
+                false,
                 true
             ]
         },
-        "(11,14)": {
+        "(11, 9)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                false,
                 true,
+                false,
                 false
             ]
         },
-        "(11,15)": {
+        "(11, 10)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
                 true,
-                false
+                false,
+                true
             ]
         },
-        "(11,16)": {
+        "(11, 11)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 true,
+                true,
+                true
+            ]
+        },
+        "(11, 12)": {
+            "value": 0,
+            "neighbors": [
                 false,
-                false
+                false,
+                false,
+                true
             ]
         },
-        "(11,17)": {
+        "(11, 13)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
-                true,
-                true
+                false,
+                false
             ]
         },
-        "(11,18)": {
+        "(11, 14)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                true,
                 false,
+                true,
                 false
             ]
         },
-        "(11,19)": {
+        "(11, 15)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
-                true,
-                true
+                false,
+                false
             ]
         },
-        "(12,0)": {
+        "(11, 16)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 true,
                 false
             ]
         },
-        "(12,1)": {
+        "(11, 17)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 false,
                 true
             ]
         },
-        "(12,2)": {
+        "(11, 18)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                false,
                 false,
+                true,
                 true
             ]
         },
-        "(12,3)": {
+        "(11, 19)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
                 false,
+                true,
                 false
             ]
         },
-        "(12,4)": {
+        "(12, 0)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
+                true,
                 true,
+                true,
+                false
+            ]
+        },
+        "(12, 1)": {
+            "value": 0,
+            "neighbors": [
+                false,
                 true,
                 false,
                 true
             ]
         },
-        "(12,5)": {
+        "(12, 2)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 true,
                 true,
                 true
             ]
         },
-        "(12,6)": {
+        "(12, 3)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
+                true,
                 false,
                 true,
                 true
             ]
         },
-        "(12,7)": {
+        "(12, 4)": {
             "value": 0,
-            "neighbours": [
-                true,
-                true,
+            "neighbors": [
+                false,
+                false,
                 true,
                 false
             ]
         },
-        "(12,8)": {
+        "(12, 5)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                true,
                 false,
-                true
+                true,
+                false
             ]
         },
-        "(12,9)": {
+        "(12, 6)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
-                false,
-                true
+                true,
+                false
             ]
         },
-        "(12,10)": {
+        "(12, 7)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
+                false,
                 true,
                 true,
+                true
+            ]
+        },
+        "(12, 8)": {
+            "value": 0,
+            "neighbors": [
+                false,
                 false,
+                false,
                 true
             ]
         },
-        "(12,11)": {
+        "(12, 9)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
+                false,
                 true,
                 true,
-                true
+                false
             ]
         },
-        "(12,12)": {
+        "(12, 10)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                true,
                 false,
+                false,
                 true
             ]
         },
-        "(12,13)": {
+        "(12, 11)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
-                true,
-                true
+                false,
+                false
             ]
         },
-        "(12,14)": {
+        "(12, 12)": {
             "value": 0,
-            "neighbours": [
-                true,
-                true,
+            "neighbors": [
+                false,
+                false,
                 true,
                 false
             ]
         },
-        "(12,15)": {
+        "(12, 13)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
+                false,
+                false,
                 true,
+                false
+            ]
+        },
+        "(12, 14)": {
+            "value": 0,
+            "neighbors": [
                 true,
+                false,
                 true,
-                true
+                false
             ]
         },
-        "(12,16)": {
+        "(12, 15)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
-                true,
-                true
+                false,
+                false
             ]
         },
-        "(12,17)": {
+        "(12, 16)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
                 true,
                 true
             ]
         },
-        "(12,18)": {
+        "(12, 17)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 false,
                 false
             ]
         },
-        "(12,19)": {
+        "(12, 18)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                false,
                 true,
+                false,
                 true
             ]
         },
-        "(13,0)": {
+        "(12, 19)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                true,
                 false,
-                false
+                true,
+                true
             ]
         },
-        "(13,1)": {
+        "(13, 0)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
                 true,
-                true
+                true,
+                false
             ]
         },
-        "(13,2)": {
+        "(13, 1)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 false,
                 false,
                 true
             ]
         },
-        "(13,3)": {
+        "(13, 2)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
+                false,
                 true,
                 false
             ]
         },
-        "(13,4)": {
+        "(13, 3)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
+                true,
                 false,
+                true,
+                false
+            ]
+        },
+        "(13, 4)": {
+            "value": 0,
+            "neighbors": [
+                true,
+                true,
                 true,
+                false
+            ]
+        },
+        "(13, 5)": {
+            "value": 0,
+            "neighbors": [
+                true,
+                true,
                 false,
                 true
             ]
         },
-        "(13,5)": {
+        "(13, 6)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 false,
                 false,
                 true
             ]
         },
-        "(13,6)": {
+        "(13, 7)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                false,
-                false,
+                true,
+                true,
                 false
             ]
         },
-        "(13,7)": {
+        "(13, 8)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
+                true,
                 false,
-                false
+                true
             ]
         },
-        "(13,8)": {
+        "(13, 9)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
+                true,
                 false,
                 true,
-                false
+                true
             ]
         },
-        "(13,9)": {
+        "(13, 10)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                false,
+                true,
                 true,
                 false
             ]
         },
-        "(13,10)": {
+        "(13, 11)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 false,
-                false
+                true
             ]
         },
-        "(13,11)": {
+        "(13, 12)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 true,
                 true,
                 true
             ]
         },
-        "(13,12)": {
+        "(13, 13)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
+                true,
                 false,
                 false,
                 true
             ]
         },
-        "(13,13)": {
+        "(13, 14)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 true,
                 true,
                 false
             ]
         },
-        "(13,14)": {
+        "(13, 15)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
+                true,
                 false,
                 true
             ]
         },
-        "(13,15)": {
+        "(13, 16)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                false,
                 true,
-                false
+                false,
+                true
             ]
         },
-        "(13,16)": {
+        "(13, 17)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
                 false,
                 false,
-                false
+                false,
+                true
             ]
         },
-        "(13,17)": {
+        "(13, 18)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
+                false,
                 true,
                 true,
                 false
             ]
         },
-        "(13,18)": {
+        "(13, 19)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
+                false,
                 false,
                 true
             ]
         },
-        "(13,19)": {
+        "(14, 0)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                false,
                 true,
-                true
+                false,
+                false
             ]
         },
-        "(14,0)": {
+        "(14, 1)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                true,
                 false,
-                false
+                false,
+                true
             ]
         },
-        "(14,1)": {
+        "(14, 2)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                true,
                 false,
-                true
+                false,
+                false
             ]
         },
-        "(14,2)": {
+        "(14, 3)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
                 false,
-                true
+                false,
+                false
             ]
         },
-        "(14,3)": {
+        "(14, 4)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                true,
                 false,
-                true
+                false,
+                false
             ]
         },
-        "(14,4)": {
+        "(14, 5)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 false,
-                true
+                false
             ]
         },
-        "(14,5)": {
+        "(14, 6)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 false,
                 true
             ]
         },
-        "(14,6)": {
+        "(14, 7)": {
             "value": 0,
-            "neighbours": [
-                false,
+            "neighbors": [
                 true,
+                false,
                 false,
                 true
             ]
         },
-        "(14,7)": {
+        "(14, 8)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                false,
+                true,
                 false,
-                true
+                false
             ]
         },
-        "(14,8)": {
+        "(14, 9)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 true,
                 false,
-                false
+                true
             ]
         },
-        "(14,9)": {
+        "(14, 10)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                true,
+                false,
                 false,
                 true
             ]
         },
-        "(14,10)": {
+        "(14, 11)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 false,
-                true
+                false
             ]
         },
-        "(14,11)": {
+        "(14, 12)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 true,
                 false,
                 true
             ]
         },
-        "(14,12)": {
+        "(14, 13)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
-                false,
+                true,
                 false,
                 true
             ]
         },
-        "(14,13)": {
+        "(14, 14)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
-                false,
+                true,
                 false,
-                false
+                true
             ]
         },
-        "(14,14)": {
+        "(14, 15)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 false,
-                false
+                true
             ]
         },
-        "(14,15)": {
+        "(14, 16)": {
             "value": 0,
-            "neighbours": [
-                true,
+            "neighbors": [
+                false,
                 false,
                 false,
                 true
             ]
         },
-        "(14,16)": {
+        "(14, 17)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 true,
                 false,
                 false
             ]
         },
-        "(14,17)": {
+        "(14, 18)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 true,
                 true,
                 false,
                 true
             ]
         },
-        "(14,18)": {
+        "(14, 19)": {
             "value": 0,
-            "neighbours": [
+            "neighbors": [
                 false,
                 false,
                 false,
                 true
-            ]
-        },
-        "(14,19)": {
-            "value": 0,
-            "neighbours": [
-                true,
-                false,
-                false,
-                false
             ]
         }
     }
