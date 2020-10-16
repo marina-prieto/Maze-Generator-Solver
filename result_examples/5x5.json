@@ -1,0 +1,256 @@
+{
+    "rows": 5,
+    "cols": 5,
+    "max_n": 4,
+    "mov": [
+        [
+            -1,
+            0
+        ],
+        [
+            0,
+            1
+        ],
+        [
+            1,
+            0
+        ],
+        [
+            0,
+            -1
+        ]
+    ],
+    "id_mov": [
+        "N",
+        "E",
+        "S",
+        "O"
+    ],
+    "cells": {
+        "(0,0)": {
+            "value": 0,
+            "neighbours": [
+                false,
+                true,
+                true,
+                false
+            ]
+        },
+        "(0,1)": {
+            "value": 0,
+            "neighbours": [
+                false,
+                true,
+                false,
+                true
+            ]
+        },
+        "(0,2)": {
+            "value": 0,
+            "neighbours": [
+                false,
+                false,
+                false,
+                true
+            ]
+        },
+        "(0,3)": {
+            "value": 0,
+            "neighbours": [
+                false,
+                true,
+                false,
+                false
+            ]
+        },
+        "(0,4)": {
+            "value": 0,
+            "neighbours": [
+                false,
+                false,
+                true,
+                true
+            ]
+        },
+        "(1,0)": {
+            "value": 0,
+            "neighbours": [
+                true,
+                true,
+                false,
+                false
+            ]
+        },
+        "(1,1)": {
+            "value": 0,
+            "neighbours": [
+                false,
+                true,
+                true,
+                true
+            ]
+        },
+        "(1,2)": {
+            "value": 0,
+            "neighbours": [
+                false,
+                true,
+                true,
+                true
+            ]
+        },
+        "(1,3)": {
+            "value": 0,
+            "neighbours": [
+                false,
+                false,
+                false,
+                true
+            ]
+        },
+        "(1,4)": {
+            "value": 0,
+            "neighbours": [
+                true,
+                false,
+                true,
+                false
+            ]
+        },
+        "(2,0)": {
+            "value": 0,
+            "neighbours": [
+                false,
+                false,
+                true,
+                false
+            ]
+        },
+        "(2,1)": {
+            "value": 0,
+            "neighbours": [
+                true,
+                false,
+                false,
+                false
+            ]
+        },
+        "(2,2)": {
+            "value": 0,
+            "neighbours": [
+                true,
+                true,
+                true,
+                false
+            ]
+        },
+        "(2,3)": {
+            "value": 0,
+            "neighbours": [
+                false,
+                true,
+                false,
+                true
+            ]
+        },
+        "(2,4)": {
+            "value": 0,
+            "neighbours": [
+                true,
+                false,
+                true,
+                true
+            ]
+        },
+        "(3,0)": {
+            "value": 0,
+            "neighbours": [
+                true,
+                true,
+                true,
+                false
+            ]
+        },
+        "(3,1)": {
+            "value": 0,
+            "neighbours": [
+                false,
+                true,
+                false,
+                true
+            ]
+        },
+        "(3,2)": {
+            "value": 0,
+            "neighbours": [
+                true,
+                true,
+                true,
+                true
+            ]
+        },
+        "(3,3)": {
+            "value": 0,
+            "neighbours": [
+                false,
+                false,
+                false,
+                true
+            ]
+        },
+        "(3,4)": {
+            "value": 0,
+            "neighbours": [
+                true,
+                false,
+                false,
+                false
+            ]
+        },
+        "(4,0)": {
+            "value": 0,
+            "neighbours": [
+                true,
+                false,
+                false,
+                false
+            ]
+        },
+        "(4,1)": {
+            "value": 0,
+            "neighbours": [
+                false,
+                true,
+                false,
+                false
+            ]
+        },
+        "(4,2)": {
+            "value": 0,
+            "neighbours": [
+                true,
+                true,
+                false,
+                true
+            ]
+        },
+        "(4,3)": {
+            "value": 0,
+            "neighbours": [
+                false,
+                true,
+                false,
+                true
+            ]
+        },
+        "(4,4)": {
+            "value": 0,
+            "neighbours": [
+                false,
+                false,
+                false,
+                true
+            ]
+        }
+    }
+}

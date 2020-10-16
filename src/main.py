@@ -1,8 +1,14 @@
+"""
+Copyright (C) 2020-2050
+    -   Marina Prieto Pech
+    -   Sergio Silvestre Pavon
+    -   Josue Carlos Zenteno Yave
+"""
 from src.Maze import Maze
 import sys
 
 
-############################---Main methods---###############################
+###########################---Main methods---##############################
 def main():
     print_header()
     while True:
@@ -10,8 +16,10 @@ def main():
 
 
 def generate_maze():
+
     rows, columns = get_rows_columns()
     maze = Maze(int(rows), int(columns))
+
     maze.generate_wilson()
     maze.generate_json()
     maze.generate_image()
@@ -22,7 +30,7 @@ def read_json():
     pass
 
 
-###########################---Auxiliary methods---###########################
+##########################---Auxiliary methods---##########################
 def print_header():
     print("Hi! Thanks for using our A-Maze-ing Generator.")
 
@@ -48,7 +56,7 @@ def get_rows_columns():
     return rows, columns
 
 
-#################################--- Main---#################################
+################################--- Main---################################
 if __name__ == '__main__':
     try:
         main()

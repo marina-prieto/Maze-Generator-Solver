@@ -1,19 +1,27 @@
+"""
+Copyright (C) 2020-2050
+    -   Marina Prieto Pech
+    -   Sergio Silvestre Pavón
+    -   Josue Carlos Zenteno Yave
+"""
 from random import randint
 from src.Cell import Cell
 from PIL import Image, ImageDraw
+import json
 
 
 class Maze:
+    ############################---Attributes---###########################
     rows, columns = int(), int()
     body, frontier, directions, pointer = list(), list(), list(), list()
 
+    ###########################---Constructor---###########################
     def __init__(self, rows, columns):
         self.rows = rows
         self.columns = columns
         self.build_body(rows, columns)
 
-###########################---Main Methods---###########################
-
+    ###########################---Main Methods---##########################
     def generate_wilson(self):
 
         first_part_done, second_part_done, everything_visited = False, False, False
@@ -24,22 +32,24 @@ class Maze:
             first_part_done = self.find_path("Main_path")
 
         self.free_resources()
+
         #while not second_part_done or not everything_visited:
+        self.get_random_cell()
         while not everything_visited:
-            self.get_random_cell()
-            #second_part_done = self.find_path("Path")
-            self.find_path("Path")
+            if self.find_path("Path"):
+                if not self.look_for_visited():
+                    self.get_random_cell()
             everything_visited = self.look_for_visited()
-            self.free_resources()
 
     def generate_image(self):
-        # Determine a size for the picture, which depends on the size of a cell (20x20 px)
-        maze_pic = Image.new(mode="1", size=((self.rows * 20) + 10, (self.columns * 20) + 10), color=1)
+        # Creating a picture of size <xy>, which depends on the size of a cell (20x20 px) and the number of rows and columns
+        maze_pic = Image.new(mode="1", size=((self.columns * 20) + 10, (self.rows * 20) + 10), color=1)
         maze_pic_draw = ImageDraw.Draw(maze_pic)
-        # Initialize a pointer in (5,5) (x,y)
 
+        # Initialize a pointer in (5,5) (x,y)
         pointer = [5, 5]
         for i in range(self.rows):
+            #We don't want to move the pointer if we are in the first row neither in the first column
             if i != 0:
                 pointer[0] = 5
                 pointer[1] += 20
@@ -54,13 +64,28 @@ class Maze:
                     maze_pic_draw.line((pointer[0], pointer[1] + 20, pointer[0] + 20, pointer[1] + 20), width=3, fill=0)
                 if not self.body[i][j].NESO[3]:
                     maze_pic_draw.line((pointer[0], pointer[1], pointer[0], pointer[1] + 20), width=3, fill=0)
-        maze_pic.show()
+
+        maze_pic.save(str(self.rows) + "x" + str(self.columns) + ".jpg")
 
     def generate_json(self):
-        pass
+        #Creating a Dictionary for the Maze class
+        maze_dict = {"rows": self.rows, "cols": self.columns, "max_n": 4, "mov": [[-1, 0], [0, 1], [1, 0], [0, -1]],
+                     "id_mov": ["N", "E", "S", "O"], "cells": {}}
 
-#################---Wilson's Auxiliary Methods---######################
+        #Filling the Cells key for the Maze dictionary with auxiliary dictionaries (one per cell per row)
+        for i in range(self.rows):
+            for j in range(self.columns):
+                cell_dict_aux = {"(" + str(i) + "," + str(j) + ")": {"value": 0, "neighbours": [self.body[i][j].NESO[0],
+                                                                                                self.body[i][j].NESO[1],
+                                                                                                self.body[i][j].NESO[2],
+                                                                                                self.body[i][j].NESO[3]]}}
+                maze_dict["cells"].update(cell_dict_aux)
 
+        #Saving the JSON file
+        with open(str(self.rows) + "x" + str(self.columns) + ".json", "w") as outfile:
+            json.dump(maze_dict, outfile, indent=4)
+
+    #################---Wilson's Auxiliary Methods---######################
     def get_initial_random_cells(self):
         rnd_final, rnd_beginning = tuple(), tuple()
         different = False
@@ -116,6 +141,7 @@ class Maze:
                 if self.body[next_cell_rcd[0]][next_cell_rcd[1]].visited and self.body[next_cell_rcd[0]][next_cell_rcd[1]].final:
                     self.dig()
                     return True
+        return False
 
     def get_random_cell(self):
         rnd_beginning = tuple()
@@ -178,5 +204,3 @@ class Maze:
             return 0
         elif selection == "O":
             return 1
-
-#################---Image Auxiliary Methods---######################
