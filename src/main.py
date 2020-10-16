@@ -5,6 +5,7 @@ Copyright (C) 2020-2050
     -   Josue Carlos Zenteno Yave
 """
 from src.Maze import Maze
+from src.JSONReader import JSONReader
 import sys
 
 
@@ -27,7 +28,10 @@ def generate_maze():
 
 
 def read_json():
-    pass
+    json_reader = JSONReader()
+    json_reader.ask_for_file()
+    json_reader.read_json()
+    json_reader.generate_image()
 
 
 ##########################---Auxiliary methods---##########################
