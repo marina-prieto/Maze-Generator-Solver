@@ -68,4 +68,3 @@ class JSONReader:
         #List of errors that we will notify
         if kind == "File_Type":
             print("Wrong file type, please select a json file")
-        #TODO

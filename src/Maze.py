@@ -65,7 +65,7 @@ class Maze:
                 if not self.body[i][j].NESO[3]:
                     maze_pic_draw.line((pointer[0], pointer[1], pointer[0], pointer[1] + 20), width=3, fill=0)
 
-        maze_pic.save(str(self.rows) + "x" + str(self.columns) + ".jpg")
+        maze_pic.save("Lab_"+str(self.rows) + "_" + str(self.columns) + ".jpg")
 
     def generate_json(self):
         # Creating a Dictionary for the Maze class
@@ -83,7 +83,7 @@ class Maze:
                 maze_dict["cells"].update(cell_dict_aux)
 
         # Saving the JSON file
-        with open(str(self.rows) + "x" + str(self.columns) + ".json", "w") as outfile:
+        with open("Lab_"+str(self.rows) + "_" + str(self.columns) + ".json", "w") as outfile:
             json.dump(maze_dict, outfile, indent=4)
 
     #################---Wilson's Auxiliary Methods---######################
