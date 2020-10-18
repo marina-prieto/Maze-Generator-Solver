@@ -71,13 +71,13 @@ This method works using indexes to select a neighbor, first it chooses a directi
 
 ## Maze.py
 This class is composed of several methods but eh most relevant ones are:
--	**generate_wilson(): Void
--	**generate_image(): Void
--	**generate_json(): Void
--	**get_initial_random_cells(): Void
--	**get_random_cell(): Void
--	**find_path(kind: String): Boolean
--	**dig(): Void
+-	**generate_wilson(): Void**
+-	**generate_image(): Void**
+-	**generate_json(): Void**
+-	**get_initial_random_cells(): Void**
+-	**get_random_cell(): Void**
+-	**find_path(kind: String): Boolean**
+-	**dig(): Void**
 
 **generate_wilson()** method only invokes the necessary methods to complete its task.
 
@@ -92,7 +92,7 @@ Then in order to draw the maze it uses a **pointer** which stores coordinates, t
 
 **find_path()** method firstly selects the last element introduced in the **Frontier** and makes that cell to randomly choose one of its neighbors. Then if the selected cell was not included in the **Frontier** previously, in other words, if it was not visited before it is marked as visited, update its **NESO**  and is added to the **Frontier**. At the same time, the direction chosen by the first cell is also saved in the **Directions** list to dig later.
 
-But if the selected cell was already visited then we keep removing cells of the **Frontier** until we reach the cell were the loop begins, unvisiting the cells and updating its corresponding **NESO values.
+But if the selected cell was already visited then we keep removing cells of the **Frontier** until we reach the cell were the loop begins, unvisiting the cells and updating its corresponding **NESO values.**
 
 This method has also a double purpose, for that if its destinated to create the main path the “Main_path” keyword must be included as parameter otherwise the “Path” keyword must be used because this is our “win condition”. 
 
@@ -105,10 +105,10 @@ It sets the **final** attribute to **True** (which means that that cell is now p
 This class is composed of four main methods and some auxiliary ones, but in this document, we are going to explain only the first four as the last ones are  easy to understand as they are very simple method.
 
 Those methods are:
--	**ask_for_file(): String
--	**read_json(): Void
--	**generate_temp_maze(): Maze.Maze
--	**generate_image(): Void
+-	**ask_for_file(): String**
+-	**read_json(): Void**
+-	**generate_temp_maze(): Maze.Maze**
+-	**generate_image(): Void**
 
 **ask_for_file()** method uses the **tkinter** library to launch the File Manager of the OS, this helps the user to choose in an easy way the file that wants to load in the program.
 
@@ -120,10 +120,10 @@ Those methods are:
 
 ## InconsiSpector.py
 This class has one principal method and three auxiliar ones that complete the functionality of the first one. These methods are:
--	**find_inconsistencies(suspicious_maze: Maze) : boolean
--	**border_inconsistency(suspicious_maze: Maze): boolean
--	**isolated_cell(suspicious_maze: Maze): boolean
--	**bad_neighbors(suspicious_maze: Maze): boolean
+-	**find_inconsistencies(suspicious_maze: Maze) : boolean**
+-	**border_inconsistency(suspicious_maze: Maze): boolean**
+-	**isolated_cell(suspicious_maze: Maze): boolean**
+-	**bad_neighbors(suspicious_maze: Maze): boolean**
 
 **find_inconsistencies()** method has a combination of conditional clauses in order to notify an inconsistency as soon as one of them is found. The order of execution is determined by its complexity of execution trying to avoid long execution times when a JSON file is introduced. If a **“light-inconsistency”** is found, then it is no necessary to check the others as the file is already not valid.
 
