@@ -17,7 +17,6 @@ def main():
 
 
 def generate_maze():
-
     rows, columns = get_rows_columns()
     maze = Maze(int(rows), int(columns))
 
@@ -30,8 +29,11 @@ def generate_maze():
 def read_json():
     json_reader = JSONReader()
     json_reader.ask_for_file()
-    json_reader.read_json()
-    json_reader.generate_image()
+    try:
+        json_reader.read_json()
+        json_reader.generate_image()
+    except KeyError:
+        print("The selected JSON file does not follow the correct format, one error was found: ", sys.exc_info())
 
 
 ##########################---Auxiliary methods---##########################

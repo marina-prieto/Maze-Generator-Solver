@@ -142,8 +142,7 @@ class Maze:
                     self.dig()
                     return True
             elif kind == "Path":
-                if self.body[next_cell_rcd[0]][next_cell_rcd[1]].visited and self.body[next_cell_rcd[0]][
-                    next_cell_rcd[1]].final:
+                if self.body[next_cell_rcd[0]][next_cell_rcd[1]].visited and self.body[next_cell_rcd[0]][next_cell_rcd[1]].final:
                     self.dig()
                     return True
         return False
