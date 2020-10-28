@@ -5,7 +5,8 @@ Copyright (C) 2020-2050
     -   Josue Carlos Zenteno Yave
 """
 from src.Maze import Maze
-from src.JSONReader import JSONReader
+from src.JSONManager import JSONManager
+from src.ImageManager import ImageManager
 import sys
 
 
@@ -19,19 +20,20 @@ def main():
 def generate_maze():
     rows, columns = get_rows_columns()
     maze = Maze(int(rows), int(columns))
-
     maze.generate_wilson()
-    maze.generate_json()
-    maze.generate_image()
+
+    JSONManager.generate_json(maze, maze.rows, maze.columns)
+    ImageManager.generate_image(maze, maze.rows, maze.columns)
+
     maze.body.clear()
 
 
 def read_json():
-    json_reader = JSONReader()
-    json_reader.ask_for_file()
+    json_manager = JSONManager()
+    json_manager.ask_for_file()
     try:
-        json_reader.read_json()
-        json_reader.generate_image()
+        json_manager.read_json()
+        json_manager.generate_image()
     except KeyError:
         print("The selected JSON file does not follow the correct format, one error was found: ", sys.exc_info())
 
