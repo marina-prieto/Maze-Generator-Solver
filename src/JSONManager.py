@@ -86,6 +86,24 @@ class JSONManager:
 
     @staticmethod
     def notify_error(kind):
-        #List of errors that we will notify
+        # List of errors that we will notify
         if kind == "File_Type":
             print("Wrong file type, please select a json file")
+
+    # NUEVO (preguntar si también generar)
+    def read_problem_json(self):
+        # select the problem json
+        self.read_json()
+        initial_state = self.input_json["INITIAL"]
+        goal_state = self.input_json["OBJETIVE"]
+        maze_json = self.input_json["MAZE"]
+        # select and check the maze jason
+        self.read_json()
+        file_path_divided = self.file_path.split('/')
+
+        while True:
+            if self.file_path[-1] != maze_json:
+                print("You don't select the corresponding maze")
+            else:
+                # self.generate_temp_maze()
+                self.generate_image()
