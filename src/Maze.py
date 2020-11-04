@@ -1,13 +1,11 @@
 """
 Copyright (C) 2020-2050
     -   Marina Prieto Pech
-    -   Sergio Silvestre Pavón
+    -   Sergio Silvestre Pavon
     -   Josue Carlos Zenteno Yave
 """
 from random import randint
 from src.Cell import Cell
-from src.ImageManager import ImageManager
-import json
 
 
 class Maze:
