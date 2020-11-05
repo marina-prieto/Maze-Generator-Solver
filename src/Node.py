@@ -1,6 +1,6 @@
 class Node:
     ###########################---Attributes---############################
-    id = tuple()
+    id = int()
     cost = float()
     id_state = tuple()
     id_parent = tuple()
