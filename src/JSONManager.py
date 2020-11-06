@@ -90,20 +90,50 @@ class JSONManager:
         if kind == "File_Type":
             print("Wrong file type, please select a json file")
 
-    # NUEVO (preguntar si también generar)
+    # NUEVO
     def read_problem_json(self):
         # select the problem json
         self.read_json()
         initial_state = self.input_json["INITIAL"]
         goal_state = self.input_json["OBJETIVE"]
         maze_json = self.input_json["MAZE"]
+
         # select and check the maze jason
         self.read_json()
         file_path_divided = self.file_path.split('/')
-
         while True:
             if self.file_path[-1] != maze_json:
                 print("You don't select the corresponding maze")
             else:
                 # self.generate_temp_maze()
                 self.generate_image()
+
+    def create_problem_json(self, maze, rows, columns):
+        is_initial, is_objective = True, True
+        initial_state_row, initial_state_column, objective_state_row, objective_state_column = int(), int(), int(), int()
+
+        # select the initial state
+        while not is_initial:
+            print("\nSelect initial state:\n")
+            initial_state_row = input("\nIntroduce initial state row:")
+            initial_state_column = input("\nIntroduce initial state column:")
+            if rows-1 > initial_state_row >= 0 and columns - 1 > initial_state_column >= 0:
+                is_initial = False
+
+        # select the objective state
+        while not is_objective:
+            print("\nSelect objective state:\n")
+            objective_state_row = input("\nIntroduce objective state row:")
+            objective_state_column = input("\nIntroduce objective state column:")
+            if rows-1 > objective_state_row >= 0 and columns - 1 > objective_state_column >= 0:
+                is_objective = False
+
+        # create the dictionary to export the info in a json format
+        problem_dict = {"INITIAL": "("+str(initial_state_row)+","+str(initial_state_column)+")",
+                        "OBJETIVE": "("+str(objective_state_row)+","+str(objective_state_column)+")",
+                        "MAZE": "Lab_" + str(rows) + "_" + str(columns) + ".json"}
+        with open("Problem_" + str(rows) + "_" + str(columns) + ".json", "w") as outfile:
+            json.dump(problem_dict, outfile)
+
+        # create the maze
+        self.generate_json(maze, rows, columns)
