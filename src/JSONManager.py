@@ -121,18 +121,16 @@ class JSONManager:
 
         # select the initial state
         while not is_initial:
-            print("\nSelect initial state:\n")
             initial_state_row = input("\nIntroduce initial state row:")
-            initial_state_column = input("\nIntroduce initial state column:")
-            if rows-1 > int(initial_state_row) >= 0 and columns - 1 > int(initial_state_column) >= 0:
+            initial_state_column = input("Introduce initial state column:")
+            if rows-1 >= int(initial_state_row) >= 0 and columns - 1 >= int(initial_state_column) >= 0:
                 is_initial = True
 
         # select the objective state
         while not is_objective:
-            print("\nSelect objective state:\n")
             objective_state_row = input("\nIntroduce objective state row:")
-            objective_state_column = input("\nIntroduce objective state column:")
-            if rows-1 > int(objective_state_row) >= 0 and columns - 1 > int(objective_state_column) >= 0:
+            objective_state_column = input("Introduce objective state column:")
+            if rows-1 >= int(objective_state_row) >= 0 and columns - 1 >= int(objective_state_column) >= 0:
                 is_objective = True
 
         # create the dictionary to export the info in a json format

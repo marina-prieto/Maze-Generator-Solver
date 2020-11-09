@@ -5,6 +5,7 @@ Copyright (C) 2020-2050
     -   Josue Carlos Zenteno Yave
 """
 
+
 class Node:
     ###########################---Attributes---############################
     id = int()
