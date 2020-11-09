@@ -102,6 +102,7 @@ class JSONManager:
 
         # select and check the maze jason
         print("Select the maze json.")
+        self.ask_for_file()
         self.read_json()
         file_path_divided = self.file_path.split('/')
         while True:

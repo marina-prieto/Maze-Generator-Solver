@@ -52,6 +52,8 @@ def generate_problem():
     json_manager.generate_maze_json(maze, maze.rows, maze.columns)
     json_manager.generate_problem_json(maze.rows, maze.columns)
 
+    maze.body.clear()
+
 
 def load_problem():
     try:
