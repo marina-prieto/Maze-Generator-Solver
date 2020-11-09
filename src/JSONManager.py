@@ -24,7 +24,7 @@ class JSONManager:
 
     ###########################---Main Methods---##########################
     @staticmethod
-    def generate_json(maze, rows, columns):
+    def generate_maze_json(maze, rows, columns):
         # Creating a Dictionary for the Maze class
         maze_dict = {"rows": rows, "cols": columns, "max_n": 4, "mov": [[-1, 0], [0, 1], [1, 0], [0, -1]],
                      "id_mov": ["N", "E", "S", "O"], "cells": {}}
@@ -93,23 +93,30 @@ class JSONManager:
     # NUEVO
     def read_problem_json(self):
         # select the problem json
+        print("Select the problem json.")
+        self.ask_for_file()
         self.read_json()
         initial_state = self.input_json["INITIAL"]
         goal_state = self.input_json["OBJETIVE"]
         maze_json = self.input_json["MAZE"]
 
         # select and check the maze jason
+        print("Select the maze json.")
         self.read_json()
         file_path_divided = self.file_path.split('/')
         while True:
-            if self.file_path[-1] != maze_json:
+            if file_path_divided[-1] != maze_json:
                 print("You don't select the corresponding maze")
             else:
                 # self.generate_temp_maze()
                 self.generate_image()
+                break
 
-    def create_problem_json(self, maze, rows, columns):
-        is_initial, is_objective = True, True
+        return initial_state, goal_state
+
+    @staticmethod
+    def generate_problem_json(rows, columns):
+        is_initial, is_objective = False, False
         initial_state_row, initial_state_column, objective_state_row, objective_state_column = int(), int(), int(), int()
 
         # select the initial state
@@ -117,16 +124,16 @@ class JSONManager:
             print("\nSelect initial state:\n")
             initial_state_row = input("\nIntroduce initial state row:")
             initial_state_column = input("\nIntroduce initial state column:")
-            if rows-1 > initial_state_row >= 0 and columns - 1 > initial_state_column >= 0:
-                is_initial = False
+            if rows-1 > int(initial_state_row) >= 0 and columns - 1 > int(initial_state_column) >= 0:
+                is_initial = True
 
         # select the objective state
         while not is_objective:
             print("\nSelect objective state:\n")
             objective_state_row = input("\nIntroduce objective state row:")
             objective_state_column = input("\nIntroduce objective state column:")
-            if rows-1 > objective_state_row >= 0 and columns - 1 > objective_state_column >= 0:
-                is_objective = False
+            if rows-1 > int(objective_state_row) >= 0 and columns - 1 > int(objective_state_column) >= 0:
+                is_objective = True
 
         # create the dictionary to export the info in a json format
         problem_dict = {"INITIAL": "("+str(initial_state_row)+","+str(initial_state_column)+")",
@@ -135,5 +142,4 @@ class JSONManager:
         with open("Problem_" + str(rows) + "_" + str(columns) + ".json", "w") as outfile:
             json.dump(problem_dict, outfile)
 
-        # create the maze
-        self.generate_json(maze, rows, columns)
+

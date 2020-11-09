@@ -9,6 +9,8 @@ from src.JSONManager import JSONManager
 from src.ImageManager import ImageManager
 import sys
 
+json_manager = JSONManager()
+
 
 ###########################---Main methods---##############################
 def main():
@@ -22,18 +24,33 @@ def generate_maze():
     maze = Maze(int(rows), int(columns))
     maze.generate_wilson()
 
-    JSONManager.generate_json(maze, maze.rows, maze.columns)
+    JSONManager.generate_maze_json(maze, maze.rows, maze.columns)
     ImageManager.generate_image(maze, maze.rows, maze.columns)
 
     maze.body.clear()
 
 
-def read_json():
-    json_manager = JSONManager()
+def read_maze():
     json_manager.ask_for_file()
     try:
         json_manager.read_json()
         json_manager.generate_image()
+    except KeyError:
+        print("The selected JSON file does not follow the correct format, one error was found: ", sys.exc_info())
+
+
+def generate_problem():
+    rows, columns = get_rows_columns()
+    maze = Maze(int(rows), int(columns))
+    maze.generate_wilson()
+
+    json_manager.generate_maze_json(maze, maze.rows, maze.columns)
+    json_manager.generate_problem_json(maze.rows, maze.columns)
+
+
+def read_problem():
+    try:
+        json_manager.read_problem_json()
     except KeyError:
         print("The selected JSON file does not follow the correct format, one error was found: ", sys.exc_info())
 
@@ -47,12 +64,18 @@ def print_menu():
     option = input("\nFeel free to choose an option:"
                    "\n\t[1] Generate a Maze"
                    "\n\t[2] Load a Maze"
-                   "\n\t[3] Exit\n")
+                   "\n\t[3] Generate a Problem"
+                   "\n\t[4] Load a Problem"
+                   "\n\t[5] Exit\n")
     if option == "1":
         generate_maze()
     elif option == "2":
-        read_json()
+        read_maze()
     elif option == "3":
+        generate_problem()
+    elif option == "4":
+        generate_maze()
+    elif option == "5":
         sys.exit()
     else:
         print("Please, choose a valid option")

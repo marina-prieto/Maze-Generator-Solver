@@ -1,3 +1,10 @@
+"""
+Copyright (C) 2020-2050
+    -   Marina Prieto Pech
+    -   Sergio Silvestre Pavon
+    -   Josue Carlos Zenteno Yave
+"""
+
 from queue import PriorityQueue
 
 
