@@ -5,11 +5,11 @@ Copyright (C) 2020-2050
     -   Josue Carlos Zenteno Yave
 """
 import json
-from src.Maze import Maze
-from src.InconsiSpector import InconsiSpector
+from Maze import Maze
+from InconsiSpector import InconsiSpector
 from tkinter import Tk     # from tkinter import Tk for Python 3.x
 from tkinter.filedialog import askopenfilename
-from src.ImageManager import ImageManager
+from ImageManager import ImageManager
 
 
 class JSONManager:

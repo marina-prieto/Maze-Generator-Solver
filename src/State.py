@@ -5,7 +5,7 @@ Copyright (C) 2020-2050
     -   Josue Carlos Zenteno Yave
 """
 
-from src.Cell import Cell
+from Cell import Cell
 
 
 class State:

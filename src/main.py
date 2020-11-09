@@ -4,12 +4,12 @@ Copyright (C) 2020-2050
     -   Sergio Silvestre Pavon
     -   Josue Carlos Zenteno Yave
 """
-from src.Maze import Maze
-from src.JSONManager import JSONManager
-from src.ImageManager import ImageManager
+from Maze import Maze
+from JSONManager import JSONManager
+from ImageManager import ImageManager
 
-from src.Node import Node
-from src.Frontier import Frontier
+from Node import Node
+from Frontier import Frontier
 from random import randint
 
 import sys

@@ -5,9 +5,9 @@ Copyright (C) 2020-2050
     -   Josue Carlos Zenteno Yave
 """
 
-from src.State import State
-from src.JSONManager import JSONManager
-from src.Maze import Maze
+from State import State
+from JSONManager import JSONManager
+from Maze import Maze
 
 
 class ProblemExitMaze:
