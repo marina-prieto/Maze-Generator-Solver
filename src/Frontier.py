@@ -23,7 +23,7 @@ class Frontier:
             self.q.put(((nodes[i].value, nodes[i].id_state[0], nodes[i].id_state[1]), nodes[i]))
 
     def push(self, node):
-        self.q.put(((node.id, node.id_state[0], node.id_state[1]), node))
+        self.q.put(((node.value, node.id_state[0], node.id_state[1]), node))
 
     def pop(self):
         item = self.q.get()

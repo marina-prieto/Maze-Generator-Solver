@@ -50,7 +50,7 @@ class ProblemExitMaze:
 
     def goal_test(self, state):
         goal_completed = False
-        states = self.get_info
+        states = self.get_info()
         goal = states[1]
 
         if state.id == goal:
@@ -60,6 +60,6 @@ class ProblemExitMaze:
 
     @staticmethod
     def get_info():
-        json_manager = JSONManager
+        json_manager = JSONManager()
         states = json_manager.read_problem_json()
         return states

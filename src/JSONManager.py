@@ -90,7 +90,6 @@ class JSONManager:
         if kind == "File_Type":
             print("Wrong file type, please select a json file")
 
-    # NUEVO
     def read_problem_json(self):
         # select the problem json
         print("Select the problem json.")

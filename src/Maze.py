@@ -22,7 +22,7 @@ class Maze:
     ###########################---Main Methods---##########################
     def generate_wilson(self):
 
-        first_part_done, second_part_done, everything_visited = False, False, False
+        first_part_done, everything_visited = False, False
 
         self.get_initial_random_cells()
 
