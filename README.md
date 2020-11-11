@@ -1,10 +1,12 @@
 # Grupo-A1_7
 Repository destinated to develop the Laboratory Practises for the subject "Intelligent Systems" in Escuela Superior de Informática - Ciudad Real
+<hr></hr>
 
-# Development decisions
-
+# General development decisions
 The Project has been developed using Python3, due to easiness with the image generation (using the **PILLOW module**) and json files manipulation (using the **JSON library** that is included in Python3).
+<hr></hr>
 
+# Development decisions [Task 1]
 ## [1] Functional requirements identified
 -	**Execute the Wilson’s Algorithm** for generating a Maze where all the cells are connected, in other words, there are not isolated places in the maze.
 -	**Generate a JPEG image** of the generated maze. 
@@ -21,13 +23,10 @@ For each cell we have an **ID** which is a tuple with its corresponding placemen
 For every Maze we have to save information about the number of **Rows** and the number of **Columns** and finally as we have to store the cells in a data structure that represents a maze we have chosen  a List of Lists that works as an “Array”. The Maze **Body**.
 
 ### Second functional requirement
-For this functional requirement we have decided to include it as a method of the class **Maze.py** that will be explained later.
+For this functional requirement we have decided to include it as a method of the class **ImageManager.py** that will be explained later.
 
-### Third functional requirement
-For this functional requirement we have decided to include it as a method of the class **Maze.py** that will be explained later.
-
-### Fourth functional requirement
-To accomplish this functional requirement, we have decided to implement the **JSONReader.py** class which has the path of the chosen file as attribute as well as the file object and the JSON objects used to safe the information stored in the JSON file into the memory of the program using a Maze object.
+### Third & Fourth functional requirement
+To accomplish this functional requirement, we have decided to implement the **JSONManager.py** class which has the path of the chosen file as attribute as well as the file object and the JSON objects used to safe the information stored in the JSON file into the memory of the program using a Maze object.
 
 ### Fifth functional requirement
 In order to complete this functional requirement, the **InconsiSpector.py** class is created, this class only have methods to fulfill its purpose, methods that will be explained later. This class works as an **Inspector** that looks for inconsistencies in a suspicious maze.
