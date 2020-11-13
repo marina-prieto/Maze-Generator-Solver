@@ -63,6 +63,7 @@ class JSONManager:
         if not found:
             #Using the corresponding method
             self.image_manager.generate_image(temp_maze, temp_maze.rows, temp_maze.columns)
+            temp_maze.body.clear()
         else:
             print("Error found: "+ kind_error)
 
