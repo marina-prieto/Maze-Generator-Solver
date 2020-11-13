@@ -15,6 +15,7 @@ from random import randint
 import sys
 
 json_manager = JSONManager()
+image_manager = ImageManager()
 
 
 ###########################---Main methods---##############################
@@ -29,8 +30,8 @@ def generate_maze():
     maze = Maze(int(rows), int(columns))
     maze.generate_wilson()
 
-    JSONManager.generate_maze_json(maze, maze.rows, maze.columns)
-    ImageManager.generate_image(maze, maze.rows, maze.columns)
+    json_manager.generate_maze_json(maze, maze.rows, maze.columns)
+    image_manager.generate_image(maze, maze.rows, maze.columns)
 
     maze.body.clear()
 

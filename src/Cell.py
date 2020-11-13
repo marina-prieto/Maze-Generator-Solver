@@ -5,13 +5,14 @@ Copyright (C) 2020-2050
     -   Josue Carlos Zenteno Yave
 """
 from random import choice
-
+from random import randint
 
 class Cell:
     ###########################---Attributes---############################
     id = tuple()
     NESO = list()
     visited, final = bool(), bool()
+    value = int()
 
     ###########################---Constructor---###########################
     def __init__(self, identifier):
@@ -19,6 +20,7 @@ class Cell:
         self.final = False
         self.visited = False
         self.NESO = [False, False, False, False]
+        self.value = self.get_random_value()
 
     ###########################---Main Methods---##########################
     def get_random_neighbour(self, rows, columns):
@@ -40,3 +42,7 @@ class Cell:
                 if self.id[1] > 0:
                     position = (self.id[0], self.id[1] - 1, "O")
                     return position
+                    
+    @staticmethod
+    def get_random_value():
+        return randint(0,3)

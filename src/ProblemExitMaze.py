@@ -17,7 +17,7 @@ class ProblemExitMaze:
 
     ###########################---Main Methods---##########################
     @staticmethod
-    def problem_exit_maze():
+    def search_algorithm():
         pass
 
     def get_initial_state(self):
@@ -33,14 +33,17 @@ class ProblemExitMaze:
             new_cell = (identifier[0] - 1, identifier[1])
             position = ("N", new_cell, 1)
             successors_list.append(position)
+
         if maze.body[identifier[0]][identifier[1]].NESO[1]:
             new_cell = (identifier[0], identifier[1] + 1)
             position = ("E", new_cell, 1)
             successors_list.append(position)
+
         if maze.body[identifier[0]][identifier[1]].NESO[2]:
             new_cell = (identifier[0] + 1, identifier[1])
             position = ("S", new_cell, 1)
             successors_list.append(position)
+
         if maze.body[identifier[0]][identifier[1]].NESO[3]:
             new_cell = (identifier[0], identifier[1] - 1)
             position = ("O", new_cell, 1)

@@ -20,6 +20,7 @@ class JSONManager:
 
     ###########################---Constructor---###########################
     def __init__(self):
+        self.image_manager = ImageManager()
         pass
 
     ###########################---Main Methods---##########################
@@ -32,11 +33,13 @@ class JSONManager:
         # Filling the Cells key for the Maze dictionary with auxiliary dictionaries (one per cell per row)
         for i in range(rows):
             for j in range(columns):
-                cell_dict_aux = {"(" + str(i) + ", " + str(j) + ")": {"value": 0, "neighbors": [maze.body[i][j].NESO[0],
-                                                                                                maze.body[i][j].NESO[1],
-                                                                                                maze.body[i][j].NESO[2],
-                                                                                                maze.body[i][j].NESO[
-                                                                                                    3]]}}
+                cell_dict_aux = {"(" + str(i) + ", " + str(j) + ")": 
+                    {
+                    "value": maze.body[i][j].value, 
+                    "neighbors": [maze.body[i][j].NESO[0],maze.body[i][j].NESO[1],maze.body[i][j].NESO[2],maze.body[i][j].NESO[3]]
+                    }
+                }
+
                 maze_dict["cells"].update(cell_dict_aux)
 
         # Saving the JSON file
@@ -59,9 +62,9 @@ class JSONManager:
         found, kind_error = inspector.find_inconsistencies(temp_maze)
         if not found:
             #Using the corresponding method
-            ImageManager.generate_image(temp_maze, temp_maze.rows, temp_maze.columns)
+            self.image_manager.generate_image(temp_maze, temp_maze.rows, temp_maze.columns)
         else:
-            print("Error found: "+kind_error)
+            print("Error found: "+ kind_error)
 
     def generate_temp_maze(self):
         maze = Maze(self.input_json["rows"], self.input_json["cols"])
