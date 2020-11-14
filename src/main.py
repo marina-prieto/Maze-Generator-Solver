@@ -11,12 +11,13 @@ from ImageManager import ImageManager
 from Node import Node
 from Frontier import Frontier
 from random import randint
+from ProblemExitMaze import ProblemExitMaze
 
 import sys
 
 json_manager = JSONManager()
 image_manager = ImageManager()
-
+problem_solver = ProblemExitMaze()
 
 ###########################---Main methods---##############################
 def main():
@@ -56,24 +57,14 @@ def generate_problem():
     maze.body.clear()
 
 
-def load_problem():
+def solve_problem():
     try:
-        json_manager.read_problem_json()
+        problem = json_manager.read_problem_json()
+        strategy = ask_for_strategy()
+        problem_solver.solve_problem(problem, strategy)
+
     except KeyError:
         print("The selected JSON file does not follow the correct format, one error was found: ", sys.exc_info())
-
-
-def test_frontier():
-    n = list()
-    f = Frontier()
-    for x in range(9):
-        node = Node(0, 0, (randint(0, 9), randint(0, 9)), (0, 0), "hola", 0, 0, randint(0, 9))
-        n.append(node)
-
-    f.create_priority_queue(n)
-    listo = f.obtain_all_nodes_ordered()
-    for x in listo:
-        print("Value:" + str(x.value) + " Row:" + str(x.id_state[0]) + " Column:" + str(x.id_state[1]))
 
 
 ##########################---Auxiliary methods---##########################
@@ -86,9 +77,8 @@ def print_menu():
                    "\n\t[1] Generate a Maze"
                    "\n\t[2] Load a Maze"
                    "\n\t[3] Generate a Problem"
-                   "\n\t[4] Load a Problem"
-                   "\n\t[5] Frontier TEST"
-                   "\n\t[6] Exit\n")
+                   "\n\t[4] Solve Problem"
+                   "\n\t[5] Exit\n")
     if option == "1":
         generate_maze()
     elif option == "2":
@@ -96,14 +86,30 @@ def print_menu():
     elif option == "3":
         generate_problem()
     elif option == "4":
-        load_problem()
+        solve_problem()
     elif option == "5":
-        test_frontier()
-    elif option == "6":
         sys.exit()
     else:
         print("Please, choose a valid option")
 
+def ask_for_strategy():
+    strategy = input("\nFeel free to choose an option:"
+                    "\n\t[1] BREADTH"
+                    "\n\t[2] DEPTH"
+                    "\n\t[3] UNIFORM"
+                    "\n\t[4] GREDDY"
+                    "\n\t[5] A\n")
+
+    if strategy == "1":
+        return "BREADTH"
+    if strategy == "2":
+        return "DEPTH"
+    if strategy == "3":
+        return "UNIFORM"
+    if strategy == "4":
+        return "GREEDY"
+    if strategy == "5":
+        return "A"
 
 def get_rows_columns():
     rows = input("Introduce the number of Rows: ")

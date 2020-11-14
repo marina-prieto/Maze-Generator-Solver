@@ -10,7 +10,7 @@ from queue import PriorityQueue
 
 class Frontier:
     ###########################---Attributes---############################
-    q = PriorityQueue()
+    pqueue = PriorityQueue()
     list_nodes = list()
 
     ###########################---Constructor---###########################
@@ -18,19 +18,19 @@ class Frontier:
         pass
 
     ###########################---Methods---###############################
-    def create_priority_queue(self, nodes):
-        for i in range(len(nodes)):
-            self.q.put(((nodes[i].value, nodes[i].id_state[0], nodes[i].id_state[1]), nodes[i]))
-
     def push(self, node):
-        self.q.put(((node.value, node.id_state[0], node.id_state[1]), node))
+        self.pqueue.put(((node.value, node.state.id_state[0], node.state.id_state[1]), node))
 
     def pop(self):
-        item = self.q.get()
-        return item
+        item = self.pqueue.get()
+        return item[1]
 
-    def obtain_all_nodes_ordered(self):
-        while not self.q.empty():
-            item = self.q.get()
+    def push_all(self, nodes):
+        for i in range(len(nodes)):
+            self.pqueue.put(((nodes[i].value, nodes[i].state.id_state[0], nodes[i].state.id_state[1]), nodes[i]))
+    
+    def pop_all(self):
+        while not self.pqueue.empty():
+            item = self.pqueue.get()
             self.list_nodes.append(item[1])
         return self.list_nodes

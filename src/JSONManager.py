@@ -73,12 +73,14 @@ class JSONManager:
         for i in range(self.input_json["rows"]):
             for j in range(self.input_json["cols"]):
                 maze.body[i][j].NESO = self.input_json["cells"]["(" + str(i) + ", " + str(j) + ")"]["neighbors"]
+                maze.body[i][j].value = self.input_json["cells"]["(" + str(i) + ", " + str(j) + ")"]["value"]
         return maze
 
     def is_valid_json(self):
         #Checking if the file is a JSON file
         if self.file_path[-4:] == "json":
             return True
+        #TODO ver que devuelve cuando le das a cancel albusac archivo
         return False
 
     def ask_for_file(self):
@@ -102,21 +104,22 @@ class JSONManager:
         initial_state = self.input_json["INITIAL"]
         goal_state = self.input_json["OBJETIVE"]
         maze_json = self.input_json["MAZE"]
-
+        #TODO Cachear error de no seleccionar archivo
         # select and check the maze jason
         print("Select the maze json.")
-        self.ask_for_file()
-        self.read_json()
-        file_path_divided = self.file_path.split('/')
         while True:
+            self.ask_for_file()
+            self.read_json()
+            file_path_divided = self.file_path.split('/')
+
             if file_path_divided[-1] != maze_json:
                 print("You don't select the corresponding maze")
             else:
-                # self.generate_temp_maze()
                 self.generate_image()
+                problem_maze = self.generate_temp_maze()
                 break
 
-        return initial_state, goal_state
+        return initial_state, goal_state, problem_maze
 
     @staticmethod
     def generate_problem_json(rows, columns):

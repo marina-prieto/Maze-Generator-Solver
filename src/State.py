@@ -10,14 +10,14 @@ from Cell import Cell
 
 class State:
     ###########################---Attributes---############################
-    c = Cell
-    neighbours = list()
-    value = int
-    id = tuple()
-
+    id_state = tuple()
+    value = tuple()
+    neighbors = list()
+    cell = None
+    
     ###########################---Constructor---###########################
-    def init(self, cell, neighbours, value, id):
-        self.c = cell
-        self.neighbours = neighbours
+    def init(self, id_state, value, neighbors, cell):
+        self.id_state = id_state
         self.value = value
-        self.id = id
+        self.neighbors = neighbors
+        self.cell = cell
