@@ -3,7 +3,7 @@ Repository destinated to develop the Laboratory Practises for the subject "Intel
 <hr></hr>
 
 # General development decisions
-The Project has been developed using Python3, due to easiness with the image generation (using the **PILLOW module**) and json files manipulation (using the **JSON library** that is included in Python3).
+The Project has been developed using Python3, due to easiness with the image generation (using the **PILLOW module**),coding experience and json files manipulation (using the **JSON library** that is included in Python3).
 <hr></hr>
 
 # Development decisions [Task 1]
