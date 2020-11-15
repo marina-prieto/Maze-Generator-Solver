@@ -6,11 +6,10 @@ Copyright (C) 2020-2050
 """
 import json
 from Maze import Maze
-from InconsiSpector import InconsiSpector
-from tkinter import Tk     # from tkinter import Tk for Python 3.x
-from tkinter.filedialog import askopenfilename
+from tkinter import Tk
 from ImageManager import ImageManager
-
+from InconsiSpector import InconsiSpector
+from tkinter.filedialog import askopenfilename
 
 class JSONManager:
     ###########################---Attributes---############################
@@ -27,7 +26,8 @@ class JSONManager:
     @staticmethod
     def generate_maze_json(maze, rows, columns):
         # Creating a Dictionary for the Maze class
-        maze_dict = {"rows": rows, "cols": columns, "max_n": 4, "mov": [[-1, 0], [0, 1], [1, 0], [0, -1]],
+        maze_dict = {"rows": rows, "cols": columns, "max_n": 4, 
+                     "mov": [[-1, 0], [0, 1], [1, 0], [0, -1]],
                      "id_mov": ["N", "E", "S", "O"], "cells": {}}
 
         # Filling the Cells key for the Maze dictionary with auxiliary dictionaries (one per cell per row)
@@ -43,16 +43,49 @@ class JSONManager:
                 maze_dict["cells"].update(cell_dict_aux)
 
         # Saving the JSON file
-        with open("Lab_" + str(rows) + "_" + str(columns) + ".json", "w") as outfile:
+        with open("problem_" + str(rows) + "x" + str(columns) + "_maze.json", "w") as outfile:
             json.dump(maze_dict, outfile, indent=4)
 
-    def read_json(self):
-        #Checking if the input file is correct or not
-        if not self.is_valid_json():
-            self.notify_error("File_Type")
-        else:
-            self.input_file = open(self.file_path)
-            self.input_json = json.load(self.input_file)
+    def generate_problem_json(self, rows, columns):
+        # select the initial state
+        initial_state_row, initial_state_column = self.ask_for_initial_state(rows, columns)
+        # select the objective state
+        objective_state_row, objective_state_column = self.ask_for_goal_state(rows, columns)
+
+        # create the dictionary to export the info into a json format
+        problem_dict = {"INITIAL": "("+ initial_state_row +", "+ initial_state_column +")",
+                        "OBJETIVE": "("+ objective_state_row +", "+ objective_state_column +")",
+                        "MAZE": "problem_" + str(rows) + "x" + str(columns) + "_maze.json"}
+
+        with open("problem_" + str(rows) + "x" + str(columns) + ".json", "w") as outfile:
+            json.dump(problem_dict, outfile)
+
+    def read_problem_json(self):
+        # select the problem json
+        print("Select the problem json.")
+        self.ask_for_file()
+        self.read_json()
+        str_initial_state = self.input_json["INITIAL"]
+        str_goal_state = self.input_json["OBJETIVE"]
+        maze_json = self.input_json["MAZE"]
+        
+        # select and check the maze jason
+        print("Select the maze json.")
+        while True:
+            self.ask_for_file()
+            self.read_json()
+            file_path_divided = self.file_path.split('/')
+
+            if file_path_divided[-1] != maze_json:
+                print("You don't select the corresponding maze")
+            else:
+                self.generate_image()
+                problem_maze = self.generate_temp_maze()
+                break
+        
+        initial_state, goal_state = self.parse_values(str_initial_state,str_goal_state)
+
+        return initial_state, goal_state, problem_maze
 
     def generate_image(self):
         inspector = InconsiSpector()
@@ -67,6 +100,38 @@ class JSONManager:
         else:
             print("Error found: "+ kind_error)
 
+    #########################---Auxiliary Methods---#######################
+    def read_json(self):
+        #Checking if the input file is correct or not
+        if self.is_valid_json():
+            self.input_file = open(self.file_path)
+            self.input_json = json.load(self.input_file)
+
+    @staticmethod
+    def ask_for_initial_state(rows, columns):
+        while True:
+            initial_state_row = input("\nIntroduce initial state row:")
+            initial_state_column = input("Introduce initial state column:")
+            if rows-1 >= int(initial_state_row) >= 0 and columns - 1 >= int(initial_state_column) >= 0:
+                break
+        return initial_state_row, initial_state_column
+
+    @staticmethod
+    def ask_for_goal_state(rows, columns):
+        while True:
+            objective_state_row = input("\nIntroduce objective state row:")
+            objective_state_column = input("Introduce objective state column:")
+            if rows-1 >= int(objective_state_row) >= 0 and columns - 1 >= int(objective_state_column) >= 0:
+                break
+        return objective_state_row, objective_state_column
+
+    def ask_for_file(self):
+        # Hiding the tk GUI
+        Tk().withdraw()
+        # show an "Open" dialog box and return the path to the selected file
+        filename = askopenfilename()
+        self.file_path = filename
+
     def generate_temp_maze(self):
         maze = Maze(self.input_json["rows"], self.input_json["cols"])
         #Assigning the NESO values to the corresponding cells of the maze
@@ -76,75 +141,36 @@ class JSONManager:
                 maze.body[i][j].value = self.input_json["cells"]["(" + str(i) + ", " + str(j) + ")"]["value"]
         return maze
 
+    @staticmethod
+    def parse_values(str_initial_state,str_goal_state):
+        initial, objetive = "", ""
+
+        for i in str_initial_state:
+            if i.isdigit():
+                initial += i
+            elif i == ',' :
+                initial += i
+            elif i == ')':
+                break
+
+        for i in str_goal_state:
+            if i.isdigit():
+                objetive += i
+            elif i == ',' :
+                objetive += i
+            elif i == ')':
+                break
+         
+        initial = initial.split(',')
+        objetive = objetive.split(',')
+        
+        initial_state = (int(initial[0]),int(initial[1]))
+        goal_state = (int(objetive[0]),int(objetive[1]))
+
+        return initial_state, goal_state
+
     def is_valid_json(self):
         #Checking if the file is a JSON file
         if self.file_path[-4:] == "json":
             return True
-        #TODO ver que devuelve cuando le das a cancel albusac archivo
         return False
-
-    def ask_for_file(self):
-        # Hiding the tk GUI
-        Tk().withdraw()
-        # show an "Open" dialog box and return the path to the selected file
-        filename = askopenfilename()
-        self.file_path = filename
-
-    @staticmethod
-    def notify_error(kind):
-        # List of errors that we will notify
-        if kind == "File_Type":
-            print("Wrong file type, please select a json file")
-
-    def read_problem_json(self):
-        # select the problem json
-        print("Select the problem json.")
-        self.ask_for_file()
-        self.read_json()
-        initial_state = self.input_json["INITIAL"]
-        goal_state = self.input_json["OBJETIVE"]
-        maze_json = self.input_json["MAZE"]
-        #TODO Cachear error de no seleccionar archivo
-        # select and check the maze jason
-        print("Select the maze json.")
-        while True:
-            self.ask_for_file()
-            self.read_json()
-            file_path_divided = self.file_path.split('/')
-
-            if file_path_divided[-1] != maze_json:
-                print("You don't select the corresponding maze")
-            else:
-                self.generate_image()
-                problem_maze = self.generate_temp_maze()
-                break
-
-        return initial_state, goal_state, problem_maze
-
-    @staticmethod
-    def generate_problem_json(rows, columns):
-        is_initial, is_objective = False, False
-        initial_state_row, initial_state_column, objective_state_row, objective_state_column = int(), int(), int(), int()
-
-        # select the initial state
-        while not is_initial:
-            initial_state_row = input("\nIntroduce initial state row:")
-            initial_state_column = input("Introduce initial state column:")
-            if rows-1 >= int(initial_state_row) >= 0 and columns - 1 >= int(initial_state_column) >= 0:
-                is_initial = True
-
-        # select the objective state
-        while not is_objective:
-            objective_state_row = input("\nIntroduce objective state row:")
-            objective_state_column = input("Introduce objective state column:")
-            if rows-1 >= int(objective_state_row) >= 0 and columns - 1 >= int(objective_state_column) >= 0:
-                is_objective = True
-
-        # create the dictionary to export the info in a json format
-        problem_dict = {"INITIAL": "("+str(initial_state_row)+","+str(initial_state_column)+")",
-                        "OBJETIVE": "("+str(objective_state_row)+","+str(objective_state_column)+")",
-                        "MAZE": "Lab_" + str(rows) + "_" + str(columns) + ".json"}
-        with open("Problem_" + str(rows) + "_" + str(columns) + ".json", "w") as outfile:
-            json.dump(problem_dict, outfile)
-
-

@@ -4,17 +4,16 @@ Copyright (C) 2020-2050
     -   Sergio Silvestre Pavon
     -   Josue Carlos Zenteno Yave
 """
+import sys
+from Node import Node
 from Maze import Maze
+from random import randint
+from Frontier import Frontier
 from JSONManager import JSONManager
 from ImageManager import ImageManager
-
-from Node import Node
-from Frontier import Frontier
-from random import randint
 from ProblemExitMaze import ProblemExitMaze
 
-import sys
-
+##############################---Global---#################################
 json_manager = JSONManager()
 image_manager = ImageManager()
 problem_solver = ProblemExitMaze()
@@ -42,8 +41,8 @@ def load_maze():
     try:
         json_manager.read_json()
         json_manager.generate_image()
-    except KeyError:
-        print("The selected JSON file does not follow the correct format, one error was found: ", sys.exc_info())
+    except Exception:
+        print("Error at loading (We expected a JSON file)")
 
 
 def generate_problem():
@@ -62,14 +61,22 @@ def solve_problem():
         problem = json_manager.read_problem_json()
         strategy = ask_for_strategy()
         problem_solver.solve_problem(problem, strategy)
-
-    except KeyError:
-        print("The selected JSON file does not follow the correct format, one error was found: ", sys.exc_info())
+    except Exception:
+        print("Error at loading (We expected a JSON file)")
 
 
 ##########################---Auxiliary methods---##########################
 def print_header():
-    print("Hi! Thanks for using our A-Maze-ing Generator.")
+    print("\n\n")
+    print(  " ______               _   __\n"
+            "/\  _  \             /'\_/` \                                     __ \n"                         
+            "\ \ \L\ \           /\       \     __     ____      __           /\_\    ___      __ \n"          
+            " \ \  __ \  ______ _\ \ \__\  \  /'__`\  /\_ ,`\  /'__`\ _______ \/\ \ /' _ `\  /'_ `\ \n"        
+            "  \ \ \/\ \/\______\ \ \ \_/ \ \/\ \L\.\_\/_/  /_/\  __//\______\ \ \ \/\ \/\ \/\ \L\ \ \n"       
+            "   \ \_\ \_\/______/  \ \_\ \ \_\ \__/.\_\ /\____\ \____\/______/  \ \_\ \_\ \_\ \____ \ \n"      
+            "    \/_/\/_/           \/_/  \/_/\/__/\/_/ \/____/\/____/           \/_/\/_/\/_/\/___L\ \ \n"     
+            "                                                                                  /\____/ \n"     
+            "                                                                                  \_/__/ \n")
 
 
 def print_menu():

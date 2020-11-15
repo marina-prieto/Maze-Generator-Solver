@@ -4,9 +4,8 @@ Copyright (C) 2020-2050
     -   Sergio Silvestre Pavon
     -   Josue Carlos Zenteno Yave
 """
-from random import randint
 from Cell import Cell
-
+from random import randint
 
 class Maze:
     ############################---Attributes---###########################

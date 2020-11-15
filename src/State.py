@@ -4,9 +4,7 @@ Copyright (C) 2020-2050
     -   Sergio Silvestre Pavon
     -   Josue Carlos Zenteno Yave
 """
-
 from Cell import Cell
-
 
 class State:
     ###########################---Attributes---############################
@@ -16,7 +14,7 @@ class State:
     cell = None
     
     ###########################---Constructor---###########################
-    def init(self, id_state, value, neighbors, cell):
+    def __init__(self, id_state, value, neighbors, cell):
         self.id_state = id_state
         self.value = value
         self.neighbors = neighbors

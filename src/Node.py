@@ -6,7 +6,6 @@ Copyright (C) 2020-2050
 """
 from State import State
 
-
 class Node:
     ###########################---Attributes---############################
     id_node = int()
@@ -29,5 +28,9 @@ class Node:
         self.heuristic = heuristic
         self.value = value
 
+    #########################---Auxiliary Methods---#######################
     def toString(self):
-        return "["+str(self.id_node)+"],["+str(self.cost)+",("+str(self.state.id_state[0])+","+str(self.state.id_state[1])+"),"+str(self.parent.id_node)+","+self.action+","+str(self.depth)+","+str(self.heuristic)+","+str(self.value)+"]"
+        if self.parent == None:
+            return "["+str(self.id_node)+"],["+str(self.cost)+",("+str(self.state.id_state[0])+","+str(self.state.id_state[1])+"),None,None,"+str(self.depth)+","+str(self.heuristic)+","+str(self.value)+"]"
+        else:
+            return "["+str(self.id_node)+"],["+str(self.cost)+",("+str(self.state.id_state[0])+","+str(self.state.id_state[1])+"),"+str(self.parent.id_node)+","+self.action+","+str(self.depth)+","+str(self.heuristic)+","+str(self.value)+"]"

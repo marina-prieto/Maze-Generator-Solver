@@ -5,7 +5,6 @@ Copyright (C) 2020-2050
     -   Josue Carlos Zenteno Yave
 """
 
-
 class InconsiSpector:
     ###########################---Constructor---###########################
     def __init__(self):
@@ -22,6 +21,7 @@ class InconsiSpector:
             return True, "There are wall inconsistencies"
         return False, "No error found"
 
+    #########################---Auxiliary Methods---#######################
     @staticmethod
     def border_inconsistency(suspicious_maze):
         # Looking for True in the N and S components for both top and bottom rows of the maze
