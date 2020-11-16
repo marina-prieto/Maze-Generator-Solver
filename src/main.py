@@ -7,6 +7,7 @@ Copyright (C) 2020-2050
 import sys
 from Node import Node
 from Maze import Maze
+from art import tprint
 from random import randint
 from Frontier import Frontier
 from JSONManager import JSONManager
@@ -68,15 +69,7 @@ def solve_problem():
 ##########################---Auxiliary methods---##########################
 def print_header():
     print("\n\n")
-    print(  " ______               _   __\n"
-            "/\  _  \             /'\_/` \                                     __ \n"                         
-            "\ \ \L\ \           /\       \     __     ____      __           /\_\    ___      __ \n"          
-            " \ \  __ \  ______ _\ \ \__\  \  /'__`\  /\_ ,`\  /'__`\ _______ \/\ \ /' _ `\  /'_ `\ \n"        
-            "  \ \ \/\ \/\______\ \ \ \_/ \ \/\ \L\.\_\/_/  /_/\  __//\______\ \ \ \/\ \/\ \/\ \L\ \ \n"       
-            "   \ \_\ \_\/______/  \ \_\ \ \_\ \__/.\_\ /\____\ \____\/______/  \ \_\ \_\ \_\ \____ \ \n"      
-            "    \/_/\/_/           \/_/  \/_/\/__/\/_/ \/____/\/____/           \/_/\/_/\/_/\/___L\ \ \n"     
-            "                                                                                  /\____/ \n"     
-            "                                                                                  \_/__/ \n")
+    tprint("A-Maze-Ing",font = "larry3d")
 
 
 def print_menu():
