@@ -43,7 +43,7 @@ def load_maze():
         json_manager.read_json()
         json_manager.generate_image()
     except Exception:
-        print("Error at loading (We expected a JSON file)")
+        print("Error at loading (We expected a valid JSON file)")
 
 
 def generate_problem():
@@ -62,8 +62,9 @@ def solve_problem():
         problem = json_manager.read_problem_json()
         strategy = ask_for_strategy()
         problem_solver.solve_problem(problem, strategy)
+        problem[2].body.clear()
     except Exception:
-        print("Error at loading (We expected a JSON file)")
+        print("Error at loading (We expected a valid JSON file)")
 
 
 ##########################---Auxiliary methods---##########################
@@ -112,8 +113,16 @@ def ask_for_strategy():
         return "A"
 
 def get_rows_columns():
-    rows = input("Introduce the number of Rows: ")
-    columns = input("Introduce the number of Columns: ")
+    while True: 
+        rows = input("Introduce the number of Rows: ")
+        columns = input("Introduce the number of Columns: ")
+        if rows.isdigit() and columns.isdigit():
+            if int(rows) > 1  and int(columns) > 1:
+                break
+            else:
+                print("\nInvalid size, the minimum size for a maze is <rows> = 2 and <columns> = 2\n")
+        else:
+            print("\nPlease introduce a valid size (<number>, <number>) \n")
     return rows, columns
 
 

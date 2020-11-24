@@ -13,6 +13,8 @@ class InconsiSpector:
     ###########################---Main Methods---##########################
     def find_inconsistencies(self, suspicious_maze):
         # Checking inconsistencies, one by one, ordered by speed of execution. If we find one then it's not necessary to find more
+        if self.incorrect_size(suspicious_maze):
+            return True, "The maze has an imposible size"
         if self.border_inconsistency(suspicious_maze):
             return True, "There are blank spaces in the border"
         if self.isolated_cell(suspicious_maze):
@@ -23,6 +25,14 @@ class InconsiSpector:
 
     #########################---Auxiliary Methods---#######################
     @staticmethod
+    def incorrect_size(suspicious_maze):
+        #Checking if the maze has an imposible size
+        if suspicious_maze.rows < 2 or suspicious_maze.columns < 2:
+            return True
+        else:
+            return False
+
+    @staticmethod
     def border_inconsistency(suspicious_maze):
         # Looking for True in the N and S components for both top and bottom rows of the maze
         for i in range(suspicious_maze.columns):
@@ -32,6 +42,7 @@ class InconsiSpector:
         for i in range(suspicious_maze.rows):
             if suspicious_maze.body[i][0].NESO[3] or suspicious_maze.body[i][suspicious_maze.columns-1].NESO[1]:
                 return True
+        return False
 
     @staticmethod
     def isolated_cell(suspicious_maze):
@@ -41,6 +52,7 @@ class InconsiSpector:
             for j in range(suspicious_maze.columns):
                 if suspicious_maze.body[i][j].NESO == bad_NESO:
                     return True
+        return False
 
     @staticmethod
     def bad_neighbors(suspicious_maze):

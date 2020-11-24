@@ -77,7 +77,8 @@ class JSONManager:
             file_path_divided = self.file_path.split('/')
 
             if file_path_divided[-1] != maze_json:
-                print("You don't select the corresponding maze")
+                print("You didn't select the corresponding maze")
+                raise Exception("")
             else:
                 self.generate_image()
                 problem_maze = self.generate_temp_maze()
@@ -110,19 +111,32 @@ class JSONManager:
     @staticmethod
     def ask_for_initial_state(rows, columns):
         while True:
-            initial_state_row = input("\nIntroduce initial state row:")
-            initial_state_column = input("Introduce initial state column:")
-            if rows-1 >= int(initial_state_row) >= 0 and columns - 1 >= int(initial_state_column) >= 0:
-                break
+            initial_state_row = input("\nIntroduce initial state row: ")
+            initial_state_column = input("Introduce initial state column: ")
+            
+            if initial_state_row.isdigit() and initial_state_column.isdigit():
+                if rows-1 >= int(initial_state_row) >= 0 and columns - 1 >= int(initial_state_column) >= 0:
+                    break
+                else:
+                    print("\nPosition out of the bounds of the maze. Please introduce a valid position")
+            else:
+                print("\nPlease introduce a valid size (<number>, <number>) \n")
+
         return initial_state_row, initial_state_column
 
     @staticmethod
     def ask_for_goal_state(rows, columns):
         while True:
-            objective_state_row = input("\nIntroduce objective state row:")
-            objective_state_column = input("Introduce objective state column:")
-            if rows-1 >= int(objective_state_row) >= 0 and columns - 1 >= int(objective_state_column) >= 0:
-                break
+            objective_state_row = input("\nIntroduce objective state row: ")
+            objective_state_column = input("Introduce objective state column: ")
+            if objective_state_row.isdigit() and objective_state_column.isdigit():
+                if rows-1 >= int(objective_state_row) >= 0 and columns - 1 >= int(objective_state_column) >= 0:
+                    break
+                else:
+                    print("\nPosition out of the bounds of the maze. Please introduce a valid position\n")
+            else:
+                print("\nPlease introduce a valid size (<number>, <number>) \n")
+            
         return objective_state_row, objective_state_column
 
     def ask_for_file(self):

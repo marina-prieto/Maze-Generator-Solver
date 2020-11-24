@@ -10,7 +10,7 @@ from random import randint
 class Maze:
     ############################---Attributes---###########################
     rows, columns = int(), int()
-    body, frontier, directions, pointer = list(), list(), list(), list()
+    body, visited, directions, pointer = list(), list(), list(), list()
 
     ###########################---Constructor---###########################
     def __init__(self, rows, columns):
@@ -44,38 +44,36 @@ class Maze:
         different = False
         # Selecting random Cells
         while not different:
-            rnd_final, rnd_beginning = (randint(0, self.rows - 1), randint(0, self.columns - 1)), (
-                randint(0, self.rows - 1), randint(0, self.columns - 1))
+            rnd_final, rnd_beginning = (randint(0, self.rows - 1), randint(0, self.columns - 1)), (randint(0, self.rows - 1), randint(0, self.columns - 1))
             if rnd_final != rnd_beginning:
                 different = True
         # Setting the corresponding values in order to initiate the algorithm
         self.body[rnd_final[0]][rnd_final[1]].final = True
         self.body[rnd_beginning[0]][rnd_beginning[1]].visited = True
-        # Introducing the first element to the frontier (which is the beginning cell)
-        self.frontier.append(self.body[rnd_beginning[0]][rnd_beginning[1]])
+        # Introducing the first element to the visited (which is the beginning cell)
+        self.visited.append(self.body[rnd_beginning[0]][rnd_beginning[1]])
 
     def find_path(self, kind):
         # Saving the last element of the Frontier (the last cell reached)
-        selector = self.frontier[-1]
+        selector = self.visited[-1]
         # Getting the tuple of (row, column, selected direction) of the cell that we are trying to reach
         next_cell_rcd = selector.get_random_neighbour(self.rows, self.columns)
         # Checking if the cell that we want to access was already visited
-        if self.body[next_cell_rcd[0]][next_cell_rcd[1]] in self.frontier:
-            if len(self.frontier) > 1:
+        if self.body[next_cell_rcd[0]][next_cell_rcd[1]] in self.visited:
+            if len(self.visited) > 1:
                 found = False
                 # Looking for the repeated value pop-ing all the elements in the Frontier until finding the repeated cell in order to avoid loops
                 while not found:
-                    # Ask if the element that we are looking for is the same as the next element in the frontier
-                    if self.frontier[-1] == self.body[next_cell_rcd[0]][next_cell_rcd[1]]:
+                    # Ask if the element that we are looking for is the same as the next element in the visited
+                    if self.visited[-1] == self.body[next_cell_rcd[0]][next_cell_rcd[1]]:
                         found = True
                     else:
                         # Unvisiting the cell
-                        self.body[self.frontier[-1].id[0]][self.frontier[-1].id[1]].visited = False
+                        self.body[self.visited[-1].id[0]][self.visited[-1].id[1]].visited = False
                         # Unbreaking the wall that the cell broke after
-                        self.body[self.frontier[-2].id[0]][self.frontier[-2].id[1]].NESO[
-                            self.neso_converter_go(self.directions[-1])] = False
+                        self.body[self.visited[-2].id[0]][self.visited[-2].id[1]].NESO[self.neso_converter_go(self.directions[-1])] = False
                         # removing both the cell and the direction chosen to reach that cell
-                        self.frontier.pop(-1)
+                        self.visited.pop(-1)
                         self.directions.pop(-1)
         else:
             # Adding the last direction chosen to the directions list
@@ -83,10 +81,9 @@ class Maze:
             # Marking the cell as Visited
             self.body[next_cell_rcd[0]][next_cell_rcd[1]].visited = True
             # Adding the last cell chosen to the Frontier list
-            self.frontier.append(self.body[next_cell_rcd[0]][next_cell_rcd[1]])
+            self.visited.append(self.body[next_cell_rcd[0]][next_cell_rcd[1]])
             # Erasing the wall, updating the values of the NESO List of the cell
-            self.body[self.frontier[-2].id[0]][self.frontier[-2].id[1]].NESO[
-                self.neso_converter_go(next_cell_rcd[2])] = True
+            self.body[self.visited[-2].id[0]][self.visited[-2].id[1]].NESO[self.neso_converter_go(next_cell_rcd[2])] = True
 
             # Check if the cell that we added is the final cell (or a visited one if we are completing the maze)
             if kind == "Main_path":
@@ -109,17 +106,16 @@ class Maze:
                 valid = True
         # Setting the corresponding values in order to initiate the algorithm
         self.body[rnd_beginning[0]][rnd_beginning[1]].visited = True
-        # Introducing the first element to the frontier (which is the beginning cell)
-        self.frontier.append(self.body[rnd_beginning[0]][rnd_beginning[1]])
+        # Introducing the first element to the visited (which is the beginning cell)
+        self.visited.append(self.body[rnd_beginning[0]][rnd_beginning[1]])
 
     def dig(self):
-        length = len(self.frontier)
+        length = len(self.visited)
         for i in range(length):
-            self.body[self.frontier[-1].id[0]][self.frontier[-1].id[1]].final = True
+            self.body[self.visited[-1].id[0]][self.visited[-1].id[1]].final = True
             if len(self.directions) != 0:
-                self.body[self.frontier[-1].id[0]][self.frontier[-1].id[1]].NESO[
-                    self.neso_converter_back(self.directions[-1])] = True
-            self.frontier.pop(-1)
+                self.body[self.visited[-1].id[0]][self.visited[-1].id[1]].NESO[self.neso_converter_back(self.directions[-1])] = True
+            self.visited.pop(-1)
             if len(self.directions) != 0:
                 self.directions.pop(-1)
 
@@ -131,7 +127,7 @@ class Maze:
         return True
 
     def free_resources(self):
-        self.frontier.clear()
+        self.visited.clear()
         self.directions.clear()
 
     def build_body(self, rows, columns):
